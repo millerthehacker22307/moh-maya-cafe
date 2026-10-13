@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moh Maya Cafe | Eco-Luxe Organic Pre-Booking, Katra Prayagraj</title>
+    <title>Moh Maya Cafe | Coffee, Cakes & Workshops — Katra, Prayagraj</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
@@ -11,45 +11,59 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
+        // Palette remapped to the cafe's real bright, aesthetic identity:
+        // cream base, cocoa text, terracotta/amber warmth, blush + soft green highlights.
+        // (Class names kept from the app logic; values redefined for the light theme.)
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         wood: {
-                            900: '#1c130d',
-                            800: '#2c1e14',
-                            700: '#3d2b1f',
-                            600: '#523a2b',
-                            500: '#73523d',
-                            300: '#a68263',
-                            100: '#e0d2c3'
+                            900: '#efe0c3',
+                            800: '#f6e7ce',
+                            700: '#e8d3ae',
+                            600: '#d9b98a',
+                            500: '#b07d4f',
+                            300: '#c9a06b',
+                            100: '#f7e8d0'
                         },
                         stone: {
-                            950: '#0c0d0e',
-                            900: '#14171a',
-                            800: '#21262b',
-                            700: '#363d45',
-                            600: '#4d5660',
-                            300: '#9faab5',
-                            100: '#f0f3f5'
+                            950: '#fdf1dc',
+                            900: '#fff7ec',
+                            800: '#f0dfc0',
+                            700: '#e8d3ae',
+                            600: '#d9c29c',
+                            500: '#a08364',
+                            400: '#8a6d4f',
+                            300: '#5d4633',
+                            200: '#4a3226',
+                            100: '#3d2b1f'
                         },
                         moss: {
-                            900: '#1b2d18',
-                            700: '#2d4a27',
-                            500: '#4b7342',
-                            400: '#6b9c5f',
-                            200: '#b8d6af'
+                            900: '#dcfce7',
+                            700: '#16a34a',
+                            600: '#15803d',
+                            500: '#22c55e',
+                            400: '#16a34a',
+                            300: '#15803d',
+                            200: '#166534'
                         },
-                        amberGlow: '#d97706',
-                        terracotta: '#c86d51',
-                        paper: '#f5efe6'
+                        amber: {
+                            200: '#9c3d0e',
+                            300: '#c2570b',
+                            400: '#dd7d0a',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        },
+                        terracotta: '#c2410c',
+                        blush: '#e8a0b4',
+                        paper: '#fffdf7'
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
+                        serif: ['Fraunces', 'serif'],
                         sans: ['Outfit', 'sans-serif']
                     }
                 }
@@ -58,55 +72,54 @@
     </script>
 
     <style>
-        /* Custom Eco-Luxe Organic Styles */
+        /* Moh Maya — bright aesthetic cafe theme */
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: #0c0d0e;
-            color: #f0f3f5;
+            background-color: #fff9f0;
+            color: #3d2b1f;
             overflow-x: hidden;
-            background-image: radial-gradient(rgba(45, 74, 39, 0.08) 1px, transparent 1px), radial-gradient(rgba(217, 119, 6, 0.05) 1px, #0c0d0e 1px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
+            background-image: radial-gradient(rgba(232, 160, 180, 0.13) 1.5px, transparent 1.5px), radial-gradient(rgba(217, 119, 6, 0.10) 1.5px, transparent 1.5px);
+            background-size: 42px 42px;
+            background-position: 0 0, 21px 21px;
         }
 
         .font-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
         }
 
-        /* Wood Grain & Stone Overlay effects */
         .wood-texture {
-            background: linear-gradient(135deg, rgba(44, 30, 20, 0.95) 0%, rgba(28, 19, 13, 0.98) 100%),
-                        radial-gradient(circle at 50% 0%, rgba(212, 163, 115, 0.15), transparent 70%);
-            border: 1px solid rgba(115, 82, 61, 0.3);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(145deg, #ffffff 0%, #fff6e8 100%);
+            border: 1px solid rgba(217, 185, 138, 0.55);
+            box-shadow: 0 12px 30px rgba(154, 82, 20, 0.10);
         }
 
         .stone-texture {
-            background: linear-gradient(145deg, #1d2228, #14171a);
-            border: 1px solid rgba(77, 86, 96, 0.4);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            background: linear-gradient(145deg, #fffdf8, #fdf3e0);
+            border: 1px solid rgba(217, 185, 138, 0.45);
+            box-shadow: 0 8px 22px rgba(154, 82, 20, 0.08);
         }
 
         .paper-texture {
-            background-color: #171513;
-            background-image: radial-gradient(#2c1e14 0.75px, transparent 0.75px);
+            background-color: #fffdf7;
+            background-image: radial-gradient(#f0dfc0 0.75px, transparent 0.75px);
             background-size: 12px 12px;
         }
 
         .amber-glow-effect {
-            box-shadow: 0 0 25px rgba(217, 119, 6, 0.25);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
         }
 
         .moss-badge {
-            background: linear-gradient(135deg, #2d4a27 0%, #1b2d18 100%);
-            border: 1px solid rgba(107, 156, 95, 0.4);
+            background: linear-gradient(135deg, #bbf7d0 0%, #dcfce7 100%);
+            border: 1px solid rgba(34, 197, 94, 0.45);
+            color: #166534;
         }
 
-        /* Ambient floating leaf animation */
+        /* Ambient floating celebration particles */
         @keyframes floatLeaf {
             0% { transform: translateY(0px) rotate(0deg) translateX(0px); opacity: 0; }
-            20% { opacity: 0.6; }
-            80% { opacity: 0.6; }
+            20% { opacity: 0.55; }
+            80% { opacity: 0.55; }
             100% { transform: translateY(-100vh) rotate(360deg) translateX(50px); opacity: 0; }
         }
 
@@ -114,8 +127,8 @@
             position: fixed;
             pointer-events: none;
             z-index: 1;
-            color: #4b7342;
-            opacity: 0.3;
+            color: #e8a0b4;
+            opacity: 0.35;
             animation: floatLeaf 18s linear infinite;
         }
 
@@ -124,14 +137,14 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0c0d0e;
+            background: #fdf1dc;
         }
         ::-webkit-scrollbar-thumb {
-            background: #3d2b1f;
+            background: #d9b98a;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #523a2b;
+            background: #b07d4f;
         }
 
         /* ============ PRINTABLE BILL ============ */
@@ -167,66 +180,68 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-moss-500 selection:text-white relative">
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-200 selection:text-amber-900 relative">
 
-    <!-- Ambient Floating Particles (Leaves/Embers) -->
+    <!-- Ambient Floating Particles (hearts/stars) -->
     <div id="ambient-particles" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
 
-    <!-- MAIN HEADER & ECO-LUXE BRAND BAR -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-950/80 border-b border-wood-700/40 transition-all duration-300">
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#fff9f0]/85 border-b border-[#ecd9bd] transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#hero" class="flex items-center space-x-3 group">
-                <div class="w-12 h-12 rounded-full wood-texture flex items-center justify-center border border-moss-500/50 group-hover:border-amber-500 transition-colors">
-                    <i class="fa-solid font-serif text-2xl text-amber-500 group-hover:scale-110 transition-transform">M</i>
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-terracotta flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-serif text-2xl text-white">M</i>
                 </div>
                 <div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-amber-100 flex items-center gap-2">
-                        MOH MAYA <span class="text-xs px-2 py-0.5 rounded-full moss-badge text-moss-200 uppercase font-sans font-medium tracking-normal">Eco Luxe</span>
+                    <span class="font-serif text-2xl font-bold tracking-wide text-stone-100 flex items-center gap-2">
+                        MOH MAYA <span class="text-xs px-2 py-0.5 rounded-full moss-badge uppercase font-sans font-semibold tracking-normal">Cafe • Bakery</span>
                     </span>
-                    <p class="text-xs text-wood-300 tracking-widest uppercase">Katra • Prayagraj</p>
+                    <p class="text-xs text-wood-300 tracking-widest uppercase font-medium">Old Katra • Prayagraj</p>
                 </div>
             </a>
 
             <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-300">
-                <a href="#hero" class="hover:text-amber-400 transition-colors">Home</a>
-                <a href="#booking-engine" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <a href="#hero" class="hover:text-terracotta transition-colors">Home</a>
+                <a href="#booking-engine" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
                     <i class="fa-solid fa-calendar-check text-moss-400 text-xs"></i> Pre-Book
                 </a>
-                <a href="#menu-section" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-utensils text-amber-500/70 text-xs"></i> Menu
+                <a href="#menu-section" class="hover:text-terracotta transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-utensils text-terracotta/70 text-xs"></i> Menu
                 </a>
-                <a href="#vibe-gallery" class="hover:text-amber-400 transition-colors">Vibe & Gallery</a>
-                <a href="#my-bookings" class="hover:text-amber-400 transition-colors flex items-center gap-1">
-                    My Bookings <span id="nav-bookings-count" class="bg-wood-700 text-amber-200 text-xs px-2 py-0.5 rounded-full">0</span>
+                <a href="#workshops" class="hover:text-terracotta transition-colors">Workshops</a>
+                <a href="#vibe-gallery" class="hover:text-terracotta transition-colors">Vibe & Gallery</a>
+                <a href="#my-bookings" class="hover:text-terracotta transition-colors flex items-center gap-1">
+                    My Bookings <span id="nav-bookings-count" class="bg-terracotta text-white text-xs px-2 py-0.5 rounded-full">0</span>
                 </a>
             </nav>
 
             <!-- Quick Action & Admin Toggle -->
             <div class="flex items-center space-x-3">
-                <button onclick="toggleAdminModal()" class="px-3.5 py-1.5 text-xs rounded-lg stone-texture border border-stone-600/50 hover:border-amber-500/50 text-stone-300 hover:text-white transition">
-                    <i class="fa-solid fa-user-shield text-amber-500 mr-1.5"></i> Admin
+                <button onclick="toggleAdminModal()" class="px-3.5 py-1.5 text-xs rounded-lg stone-texture hover:border-terracotta/50 text-stone-300 hover:text-stone-100 transition">
+                    <i class="fa-solid fa-user-shield text-terracotta mr-1.5"></i> Admin
                 </button>
 
-                <a href="#booking-engine" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-wood-600 via-wood-500 to-amber-700 text-white font-semibold text-sm shadow-lg hover:brightness-110 active:scale-95 transition hidden sm:flex items-center gap-2 border border-amber-500/30">
-                    <i class="fa-solid fa-chair text-amber-200"></i> Reserve Table
+                <a href="#booking-engine" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-terracotta text-white font-semibold text-sm shadow-lg hover:brightness-110 active:scale-95 transition hidden sm:flex items-center gap-2">
+                    <i class="fa-solid fa-chair"></i> Reserve Table
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-300 hover:text-white">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-300 hover:text-stone-100">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-b border-wood-800 px-6 py-4 space-y-3">
-            <a href="#hero" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Home</a>
-            <a href="#booking-engine" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Pre-Book Table</a>
-            <a href="#menu-section" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Artisanal Menu</a>
-            <a href="#vibe-gallery" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Eco-Vibe Gallery</a>
-            <a href="#my-bookings" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">My Bookings</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#fffdf8] border-b border-[#ecd9bd] px-6 py-4 space-y-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">Home</a>
+            <a href="#booking-engine" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">Pre-Book Table</a>
+            <a href="#menu-section" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">Menu</a>
+            <a href="#workshops" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">Workshops & Adda</a>
+            <a href="#vibe-gallery" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">Vibe & Gallery</a>
+            <a href="#my-bookings" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-terracotta py-1">My Bookings</a>
         </div>
     </header>
 
@@ -234,61 +249,59 @@
 
         <!-- HERO SECTION -->
         <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
-            <!-- Background Image with Wood Grain Overlay -->
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1920"
-                     alt="Moh Maya Cafe Interior"
-                     class="w-full h-full object-cover opacity-25 filter contrast-125 brightness-75 scale-105 transform hover:scale-100 transition-transform duration-1000"
-                     onerror="this.src='https://placehold.co/1920x1080/1c130d/f0f3f5?text=Moh+Maya+Cafe+Prayagraj'">
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-transparent to-stone-950/90"></div>
+                     alt="Moh Maya Cafe — bright, aesthetic cafe space"
+                     class="w-full h-full object-cover opacity-40 scale-105 transform hover:scale-100 transition-transform duration-1000"
+                     onerror="this.src='https://placehold.co/1920x1080/fdf1dc/9a3412?text=Moh+Maya+Cafe+Prayagraj'">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#fff9f0] via-[#fff9f0]/60 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-[#fff9f0]/85 via-transparent to-[#fff9f0]/85"></div>
             </div>
 
             <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
-                <!-- Eco Tag Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full moss-badge text-moss-200 text-xs sm:text-sm font-medium tracking-wide shadow-xl border border-moss-400/30 animate-pulse">
-                    <i class="fa-solid fa-leaf text-moss-400"></i>
-                    <span>Katra Prayagraj's Premier Eco-Luxe Sanctuary</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                    <span class="text-amber-200 font-semibold">100% Organic Vibe</span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/85 text-stone-200 text-xs sm:text-sm font-medium tracking-wide shadow-lg border border-blush/60">
+                    <i class="fa-brands fa-instagram text-terracotta"></i>
+                    <span>Old Katra's favourite adda — cafe, bakery & workshop space</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-moss-500"></span>
+                    <span class="text-terracotta font-semibold">1,600+ Insta family</span>
                 </div>
 
-                <!-- Main Title -->
-                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-100 leading-tight">
-                    Where Raw Nature Meets <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-terracotta italic">Prayagraj's Gen-Z Vibe</span>
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-stone-100 leading-tight">
+                    Coffee, Cakes &<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-terracotta to-blush italic">Bohot Saari Moh-Maya</span>
                 </h1>
 
-                <!-- Subtitle Description -->
-                <p class="max-w-2xl mx-auto text-stone-300 text-base sm:text-lg leading-relaxed font-light">
-                    Hand-carved reclaimed dark oak tables, smooth river stone hearths, artisanal micro-brews, and intimate candlelit nooks. Step away from the city hustle into pure, grounded serenity.
+                <p class="max-w-2xl mx-auto text-stone-300 text-base sm:text-lg leading-relaxed">
+                    Prayagraj's hidden gem for bestie hangouts, birthday plans, bento-cake workshops and slow coffee afternoons. Book your corner before you come — table ready, food ready, photos ready.
                 </p>
 
-                <!-- Value Props Pills -->
                 <div class="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-stone-300 py-2">
-                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
-                        <i class="fa-solid fa-tree text-amber-500"></i> Reclaimed Wood Decor
+                    <span class="px-3 py-1.5 rounded-lg stone-texture flex items-center gap-2">
+                        <i class="fa-solid fa-cake-candles text-terracotta"></i> Bento Cake Workshops
                     </span>
-                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
-                        <i class="fa-solid fa-fire text-terracotta"></i> Stone Hearth Hearthside
+                    <span class="px-3 py-1.5 rounded-lg stone-texture flex items-center gap-2">
+                        <i class="fa-solid fa-pizza-slice text-amber-500"></i> Pizza • Burger • Coffee
                     </span>
-                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
-                        <i class="fa-solid fa-mug-hot text-moss-400"></i> Cold Press & Brews
+                    <span class="px-3 py-1.5 rounded-lg stone-texture flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-blush"></i> Bestie Dates & Birthdays
                     </span>
-                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
-                        <i class="fa-solid fa-coins text-amber-400"></i> 100% Cover Redeemable
+                    <span class="px-3 py-1.5 rounded-lg stone-texture flex items-center gap-2">
+                        <i class="fa-solid fa-coins text-amber-500"></i> 100% Cover Redeemable
                     </span>
                 </div>
 
-                <!-- Action CTAs -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <a href="#booking-engine" class="w-full sm:w-auto px-8 py-4 rounded-xl wood-texture text-amber-100 font-semibold text-base border border-amber-500/40 hover:border-amber-400 amber-glow-effect hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-chair text-amber-400 text-lg"></i>
-                        <span>Book Your Wooden Table</span>
+                    <a href="#booking-engine" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-terracotta text-white font-semibold text-base shadow-xl amber-glow-effect hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-chair text-lg"></i>
+                        <span>Book Your Table</span>
                     </a>
-                    <a href="#menu-section" class="w-full sm:w-auto px-8 py-4 rounded-xl stone-texture text-stone-200 hover:text-white font-medium text-base border border-stone-600 hover:border-stone-400 hover:bg-stone-800 transition-all flex items-center justify-center gap-2">
+                    <a href="#menu-section" class="w-full sm:w-auto px-8 py-4 rounded-xl stone-texture text-stone-200 hover:text-stone-100 font-medium text-base hover:bg-white transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-book-open text-moss-400"></i>
-                        <span>Explore Organic Menu</span>
+                        <span>See the Menu</span>
+                    </a>
+                    <a href="https://www.instagram.com/_moh______maya/" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/80 border border-blush/70 text-stone-200 hover:text-terracotta font-medium text-base transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram text-terracotta"></i>
+                        <span>@_moh______maya</span>
                     </a>
                 </div>
             </div>
@@ -296,26 +309,26 @@
 
         <!-- HOW IT WORKS STRIP -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
-            <div class="stone-texture rounded-3xl p-6 sm:p-8 border border-stone-700/60">
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-amber-200 text-center mb-6">How It Works — Booking in 4 Simple Steps</h3>
+            <div class="stone-texture rounded-3xl p-6 sm:p-8">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-100 text-center mb-6">How It Works — Booking in 4 Simple Steps</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
-                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-amber-400 text-lg mb-2"><i class="fa-solid fa-chair"></i></div>
+                    <div class="p-4 rounded-2xl bg-white/80 border border-[#f0dfc0]">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-terracotta text-lg mb-2"><i class="fa-solid fa-chair"></i></div>
                         <div class="text-sm font-semibold text-stone-100">1. Book Table</div>
                         <p class="text-xs text-stone-400 mt-1">Date, slot, guests aur dishes choose karo.</p>
                     </div>
-                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
+                    <div class="p-4 rounded-2xl bg-white/80 border border-[#f0dfc0]">
                         <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-moss-400 text-lg mb-2"><i class="fa-solid fa-qrcode"></i></div>
                         <div class="text-sm font-semibold text-stone-100">2. Pay via QR</div>
-                        <p class="text-xs text-stone-400 mt-1">Cafe ke Paytm UPI QR se amount pay karo.</p>
+                        <p class="text-xs text-stone-400 mt-1">Cafe ke UPI QR se amount pay karo.</p>
                     </div>
-                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
-                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-amber-400 text-lg mb-2"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="p-4 rounded-2xl bg-white/80 border border-[#f0dfc0]">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-terracotta text-lg mb-2"><i class="fa-solid fa-circle-check"></i></div>
                         <div class="text-sm font-semibold text-stone-100">3. Owner Verifies Payment</div>
                         <p class="text-xs text-stone-400 mt-1">Owner apne UPI me payment check karke tick karta hai.</p>
                     </div>
-                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
-                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-terracotta text-lg mb-2"><i class="fa-solid fa-file-invoice"></i></div>
+                    <div class="p-4 rounded-2xl bg-white/80 border border-[#f0dfc0]">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-blush text-lg mb-2"><i class="fa-solid fa-file-invoice"></i></div>
                         <div class="text-sm font-semibold text-stone-100">4. Confirmed + Bill</div>
                         <p class="text-xs text-stone-400 mt-1">Booking confirm hoti hai aur bill print ho jata hai.</p>
                     </div>
@@ -323,13 +336,72 @@
             </div>
         </section>
 
+        <!-- WORKSHOPS & ADDA -->
+        <section id="workshops" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">More Than a Cafe</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Workshops & Adda</h2>
+                <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Moh Maya is where Prayagraj comes to create — paint a cake, bedazzle a tumbler, get your nails done over coffee, or just celebrate your people.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="wood-texture rounded-2xl overflow-hidden group">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800" alt="Bento cake workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-terracotta font-semibold">Signature</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Paint-Your-Own Bento Cake</h3>
+                        <p class="text-xs text-stone-400 mt-1">Our most-loved workshop — decorate your own bento cake with friends, frosting and lots of photos.</p>
+                    </div>
+                </div>
+
+                <div class="wood-texture rounded-2xl overflow-hidden group">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&q=80&w=800" alt="Art and DIY workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-moss-300 font-semibold">Create</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Art, DIY & Writing</h3>
+                        <p class="text-xs text-stone-400 mt-1">Bedazzling sessions, art workshops and writing addas with local creators — beginners fully welcome.</p>
+                    </div>
+                </div>
+
+                <div class="wood-texture rounded-2xl overflow-hidden group">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Nail art pop-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-blush font-semibold">Pop-ups</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Nail Dates & Pop-ups</h3>
+                        <p class="text-xs text-stone-400 mt-1">Nail-art pop-ups and small-brand weekends — pretty nails, good coffee, great company.</p>
+                    </div>
+                </div>
+
+                <div class="wood-texture rounded-2xl overflow-hidden group">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800" alt="Friends celebrating at the cafe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-amber-600 font-semibold">Celebrate</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Birthdays & Bestie Dates</h3>
+                        <p class="text-xs text-stone-400 mt-1">Friendship days, birthdays, creator meetups — book a corner and make it yours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-stone-400 mt-8">Workshop dates and pop-ups are announced first on Instagram — <a href="https://www.instagram.com/_moh______maya/" target="_blank" rel="noopener" class="text-terracotta font-semibold hover:underline">follow @_moh______maya</a></p>
+        </section>
+
         <!-- PRE-BOOKING ENGINE & LIVE COVER CALCULATOR -->
         <section id="booking-engine" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
             <div class="text-center space-y-3 mb-12">
-                <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold">Reserve Your Spot</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Eco-Table Pre-Booking</h2>
+                <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Reserve Your Spot</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Table Pre-Booking</h2>
                 <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
-                    Adjust party size, lock in your preferred ambient slot, and pre-order dishes directly. Min cover charge is 100% redeemable against your food & beverage bill!
+                    Party size choose karo, apna favourite corner lock karo, aur dishes pehle se pre-order kar do. Minimum cover charge 100% redeemable hai tumhare food & beverage bill me!
                 </p>
             </div>
 
@@ -337,124 +409,124 @@
 
                 <!-- Left Column: Booking Form -->
                 <div class="lg:col-span-7 wood-texture rounded-3xl p-6 sm:p-8 relative overflow-hidden">
-                    <div class="absolute -top-12 -right-12 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -top-12 -right-12 w-40 h-40 bg-blush/20 rounded-full blur-3xl pointer-events-none"></div>
 
                     <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
 
                         <!-- Step 1: Date & Time Slot -->
                         <div>
-                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
-                                <i class="fa-regular fa-calendar-days text-amber-500 mr-2"></i>1. Select Date & Ambient Time Slot
+                            <label class="block text-xs uppercase tracking-wider text-stone-300 mb-3 font-semibold">
+                                <i class="fa-regular fa-calendar-days text-terracotta mr-2"></i>1. Select Date & Time Slot
                             </label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <input type="date" id="book-date" required class="w-full bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                                    <input type="date" id="book-date" required class="w-full bg-white border border-[#e8d3ae] rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-terracotta text-sm">
                                 </div>
                                 <div>
-                                    <select id="book-slot" required onchange="calculateCover()" class="w-full bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
-                                        <option value="Afternoon Chill (12 PM - 4 PM)">Afternoon Chill (12 PM - 4 PM)</option>
-                                        <option value="Sunset Vibe (4 PM - 7 PM)" selected>Sunset Vibe (4 PM - 7 PM)</option>
-                                        <option value="Evening Glow (7 PM - 11 PM)">Evening Glow (7 PM - 11 PM)</option>
+                                    <select id="book-slot" required onchange="calculateCover()" class="w-full bg-white border border-[#e8d3ae] rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-terracotta text-sm">
+                                        <option value="Brunch & Chill (11 AM - 2 PM)">Brunch & Chill (11 AM - 2 PM)</option>
+                                        <option value="Afternoon Hangout (2 PM - 6 PM)" selected>Afternoon Hangout (2 PM - 6 PM)</option>
+                                        <option value="Evening Vibe (6 PM - 10 PM)">Evening Vibe (6 PM - 10 PM)</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Step 2: Guest Count Steppers -->
-                        <div class="border-t border-wood-700/50 pt-6">
-                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
-                                <i class="fa-solid fa-users text-amber-500 mr-2"></i>2. Guest Breakdown (Cover Charges)
+                        <div class="border-t border-[#f0dfc0] pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-stone-300 mb-3 font-semibold">
+                                <i class="fa-solid fa-users text-terracotta mr-2"></i>2. Guest Breakdown (Cover Charges)
                             </label>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <!-- Girls Stepper -->
-                                <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 flex items-center justify-between">
+                                <div class="bg-[#fff7ec] border border-[#f0dfc0] rounded-2xl p-4 flex items-center justify-between">
                                     <div>
                                         <div class="text-sm font-semibold text-stone-200">Girls Party</div>
                                         <div class="text-xs text-moss-400 font-medium">₹100 / person</div>
                                     </div>
                                     <div class="flex items-center space-x-3">
                                         <button type="button" onclick="updateGuestCount('girls', -1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">-</button>
-                                        <span id="girls-count" class="font-semibold text-lg text-white w-6 text-center">1</span>
+                                        <span id="girls-count" class="font-semibold text-lg text-stone-100 w-6 text-center">1</span>
                                         <button type="button" onclick="updateGuestCount('girls', 1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">+</button>
                                     </div>
                                 </div>
 
                                 <!-- Boys Stepper -->
-                                <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 flex items-center justify-between">
+                                <div class="bg-[#fff7ec] border border-[#f0dfc0] rounded-2xl p-4 flex items-center justify-between">
                                     <div>
                                         <div class="text-sm font-semibold text-stone-200">Boys Party</div>
                                         <div class="text-xs text-terracotta font-medium">₹300 / person</div>
                                     </div>
                                     <div class="flex items-center space-x-3">
                                         <button type="button" onclick="updateGuestCount('boys', -1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">-</button>
-                                        <span id="boys-count" class="font-semibold text-lg text-white w-6 text-center">1</span>
+                                        <span id="boys-count" class="font-semibold text-lg text-stone-100 w-6 text-center">1</span>
                                         <button type="button" onclick="updateGuestCount('boys', 1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 3: Preferred Table Type -->
-                        <div class="border-t border-wood-700/50 pt-6">
-                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
-                                <i class="fa-solid fa-couch text-amber-500 mr-2"></i>3. Select Wooden Table Corner
+                        <!-- Step 3: Preferred Table Corner -->
+                        <div class="border-t border-[#f0dfc0] pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-stone-300 mb-3 font-semibold">
+                                <i class="fa-solid fa-couch text-terracotta mr-2"></i>3. Pick Your Favourite Corner
                             </label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                                 <label class="cursor-pointer">
-                                    <input type="radio" name="table-corner" value="Raw Walnut Nook" checked class="peer hidden">
-                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
-                                        <i class="fa-solid fa-tree text-base block mb-1"></i> Raw Walnut
+                                    <input type="radio" name="table-corner" value="Window Wali Seat" checked class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-[#f0dfc0] bg-white/70 peer-checked:border-terracotta peer-checked:bg-orange-50 peer-checked:text-terracotta text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-sun text-base block mb-1"></i> Window Seat
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="radio" name="table-corner" value="Stone Hearth Table" class="peer hidden">
-                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
-                                        <i class="fa-solid fa-fire-burner text-base block mb-1"></i> Stone Hearth
+                                    <input type="radio" name="table-corner" value="Bestie Booth" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-[#f0dfc0] bg-white/70 peer-checked:border-terracotta peer-checked:bg-orange-50 peer-checked:text-terracotta text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-heart text-base block mb-1"></i> Bestie Booth
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="radio" name="table-corner" value="Vine Balcony" class="peer hidden">
-                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
-                                        <i class="fa-solid fa-leaf text-base block mb-1"></i> Vine Balcony
+                                    <input type="radio" name="table-corner" value="Workshop Table" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-[#f0dfc0] bg-white/70 peer-checked:border-terracotta peer-checked:bg-orange-50 peer-checked:text-terracotta text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-palette text-base block mb-1"></i> Workshop Table
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
-                                    <input type="radio" name="table-corner" value="Candlelight Alcove" class="peer hidden">
-                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
-                                        <i class="fa-solid fa-candle-holder text-base block mb-1"></i> Candle Alcove
+                                    <input type="radio" name="table-corner" value="Cozy Sofa Corner" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-[#f0dfc0] bg-white/70 peer-checked:border-terracotta peer-checked:bg-orange-50 peer-checked:text-terracotta text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-couch text-base block mb-1"></i> Sofa Corner
                                     </div>
                                 </label>
                             </div>
                         </div>
 
                         <!-- Step 4: Contact Information -->
-                        <div class="border-t border-wood-700/50 pt-6 space-y-4">
-                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-1 font-medium">
-                                <i class="fa-solid fa-id-card text-amber-500 mr-2"></i>4. Customer Details
+                        <div class="border-t border-[#f0dfc0] pt-6 space-y-4">
+                            <label class="block text-xs uppercase tracking-wider text-stone-300 mb-1 font-semibold">
+                                <i class="fa-solid fa-id-card text-terracotta mr-2"></i>4. Customer Details
                             </label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="text" id="cust-name" placeholder="Full Name" required class="bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
-                                <input type="tel" id="cust-phone" placeholder="Phone Number (10 digits)" required pattern="[0-9]{10}" class="bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                                <input type="text" id="cust-name" placeholder="Full Name" required class="bg-white border border-[#e8d3ae] rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-terracotta text-sm">
+                                <input type="tel" id="cust-phone" placeholder="Phone Number (10 digits)" required pattern="[0-9]{10}" class="bg-white border border-[#e8d3ae] rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-terracotta text-sm">
                             </div>
                         </div>
 
                         <!-- Payment Mode Selector -->
-                        <div class="border-t border-wood-700/50 pt-6">
-                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
-                                <i class="fa-solid fa-wallet text-amber-500 mr-2"></i>5. Payment Option
+                        <div class="border-t border-[#f0dfc0] pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-stone-300 mb-3 font-semibold">
+                                <i class="fa-solid fa-wallet text-terracotta mr-2"></i>5. Payment Option
                             </label>
                             <div class="grid grid-cols-2 gap-3">
                                 <label class="cursor-pointer">
                                     <input type="radio" name="pay-option" value="online" checked class="peer hidden">
-                                    <div class="p-3 border border-stone-800 bg-stone-900/60 rounded-xl text-center peer-checked:border-moss-500 peer-checked:bg-moss-900/40 peer-checked:text-moss-200 text-xs font-medium text-stone-300">
+                                    <div class="p-3 border border-[#f0dfc0] bg-white/70 rounded-xl text-center peer-checked:border-moss-500 peer-checked:bg-green-50 peer-checked:text-moss-200 text-xs font-medium text-stone-300">
                                         <i class="fa-solid fa-qrcode text-base block mb-1 text-moss-400"></i> Pay Now via UPI QR
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
                                     <input type="radio" name="pay-option" value="payAtCafe" class="peer hidden">
-                                    <div class="p-3 border border-stone-800 bg-stone-900/60 rounded-xl text-center peer-checked:border-amber-500 peer-checked:bg-amber-900/30 peer-checked:text-amber-200 text-xs font-medium text-stone-300">
-                                        <i class="fa-solid fa-store text-base block mb-1 text-amber-400"></i> Pay Min Cover at Counter
+                                    <div class="p-3 border border-[#f0dfc0] bg-white/70 rounded-xl text-center peer-checked:border-terracotta peer-checked:bg-orange-50 peer-checked:text-terracotta text-xs font-medium text-stone-300">
+                                        <i class="fa-solid fa-store text-base block mb-1 text-terracotta"></i> Pay Min Cover at Counter
                                     </div>
                                 </label>
                             </div>
@@ -462,8 +534,8 @@
                         </div>
 
                         <!-- Submit CTA -->
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-terracotta text-stone-950 font-bold text-base shadow-xl hover:brightness-110 transition active:scale-95 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-check-circle"></i> Confirm Eco-Reservation
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-terracotta text-white font-bold text-base shadow-xl hover:brightness-110 transition active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check-circle"></i> Confirm Reservation
                         </button>
 
                     </form>
@@ -471,13 +543,12 @@
 
                 <!-- Right Column: Live Cover & Pre-Order Summary Card -->
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="stone-texture rounded-3xl p-6 sm:p-8 border border-stone-700/60 shadow-2xl relative">
-                        <div class="flex items-center justify-between pb-4 border-b border-stone-800">
-                            <h3 class="font-serif text-xl font-bold text-amber-200">Live Cover Breakdown</h3>
-                            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">100% Redeemable</span>
+                    <div class="stone-texture rounded-3xl p-6 sm:p-8 relative">
+                        <div class="flex items-center justify-between pb-4 border-b border-[#f0dfc0]">
+                            <h3 class="font-serif text-xl font-bold text-stone-100">Live Cover Breakdown</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-600 border border-amber-500/30 font-semibold">100% Redeemable</span>
                         </div>
 
-                        <!-- Cover Formula Items -->
                         <div class="space-y-4 my-6 text-sm">
                             <div class="flex justify-between items-center text-stone-300">
                                 <span id="summary-girls-label">Girls Cover (1 x ₹100):</span>
@@ -488,81 +559,91 @@
                                 <span id="summary-boys-val" class="font-semibold text-stone-100">₹300</span>
                             </div>
 
-                            <div class="flex justify-between items-center pt-3 border-t border-stone-800 text-amber-300 font-medium">
+                            <div class="flex justify-between items-center pt-3 border-t border-[#f0dfc0] text-terracotta font-medium">
                                 <span>Minimum Cover Threshold:</span>
                                 <span id="summary-min-cover" class="font-bold text-base">₹400</span>
                             </div>
 
-                            <!-- Pre-Order Items List directly in Cover Card -->
-                            <div class="pt-4 border-t border-stone-800 space-y-2">
+                            <div class="pt-4 border-t border-[#f0dfc0] space-y-2">
                                 <div class="flex justify-between items-center text-xs text-stone-400 uppercase tracking-wider">
                                     <span>Pre-Ordered Menu Items</span>
-                                    <a href="#menu-section" class="text-amber-400 hover:underline lowercase font-sans">+ add dishes</a>
+                                    <a href="#menu-section" class="text-terracotta hover:underline lowercase font-sans">+ add dishes</a>
                                 </div>
                                 <div id="summary-menu-items-list" class="space-y-1.5 max-h-36 overflow-y-auto pr-1 text-xs text-stone-300">
-                                    <p class="text-stone-500 italic py-2">No menu dishes added yet. Scroll to menu to pre-order snacks & brews!</p>
+                                    <p class="text-stone-500 italic py-2">No menu dishes added yet. Scroll to menu to pre-order cakes, bites & brews!</p>
                                 </div>
                                 <div class="flex justify-between items-center pt-2 text-stone-200">
                                     <span>Pre-Order Dishes Total:</span>
-                                    <span id="summary-preorder-total" class="font-semibold text-amber-400">₹0</span>
+                                    <span id="summary-preorder-total" class="font-semibold text-terracotta">₹0</span>
                                 </div>
                             </div>
 
-                            <!-- Calculation Result -->
-                            <div class="p-4 rounded-2xl bg-stone-900/90 border border-wood-700/50 space-y-2 pt-4">
+                            <div class="p-4 rounded-2xl bg-[#fff7ec] border border-[#e8d3ae] space-y-2 pt-4">
                                 <div class="flex justify-between items-center text-sm">
                                     <span class="text-stone-300 font-medium">Amount to Pay Now:</span>
                                     <span id="summary-pay-now" class="text-2xl font-bold text-moss-400">₹400</span>
                                 </div>
                                 <div class="flex justify-between items-center text-xs text-stone-400">
                                     <span>Remaining Balance at Cafe:</span>
-                                    <span id="summary-balance-at-cafe" class="font-semibold text-amber-300">₹0</span>
+                                    <span id="summary-balance-at-cafe" class="font-semibold text-terracotta">₹0</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Rule Notice -->
-                        <div class="text-xs text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2">
-                            <i class="fa-solid fa-circle-info text-amber-500 mt-0.5"></i>
+                        <div class="text-xs text-stone-400 bg-[#fdf1dc] p-3 rounded-xl border border-[#f0dfc0] flex items-start gap-2">
+                            <i class="fa-solid fa-circle-info text-terracotta mt-0.5"></i>
                             <p>If your pre-ordered menu dishes exceed the minimum cover, you pay the higher total now. If lower, you pay the minimum cover now and use the full amount at the cafe.</p>
                         </div>
                     </div>
 
                     <!-- Quick Support Banner -->
-                    <div class="wood-texture p-4 rounded-2xl border border-wood-700/40 flex items-center justify-between text-xs text-stone-300">
+                    <div class="wood-texture p-4 rounded-2xl flex items-center justify-between text-xs text-stone-300">
                         <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                            <div class="w-8 h-8 rounded-full bg-amber-500/15 text-terracotta flex items-center justify-center">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <div class="font-medium text-stone-200">Need Custom Group Booking?</div>
-                                <div class="text-stone-400">+91 98765 43210 • Katra, Prayagraj</div>
+                                <div class="font-medium text-stone-200">Need a Group / Workshop Booking?</div>
+                                <div class="text-stone-400">+91 92192 94961 • Katra, Prayagraj</div>
                             </div>
                         </div>
-                        <a href="tel:9876543210" class="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200">Call</a>
+                        <a href="tel:+919219294961" class="px-3 py-1.5 rounded-lg bg-terracotta text-white font-semibold">Call</a>
+                    </div>
+
+                    <!-- Directions Banner -->
+                    <div class="wood-texture p-4 rounded-2xl flex items-center justify-between text-xs text-stone-300">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-moss-500/15 text-moss-400 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-stone-200">46/12 Master Zaharul Husan Road</div>
+                                <div class="text-stone-400">Katra, Prayagraj 211002</div>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Moh+Maya+Cafe+Katra+Prayagraj" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-moss-500 text-white font-semibold">Directions</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
-
-        <!-- ORGANIC MENU & PRE-ORDER SHOWCASE -->
+        <!-- MENU & PRE-ORDER SHOWCASE -->
         <section id="menu-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
-                    <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold">Fresh & Handcrafted</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Artisanal Eco-Menu</h2>
-                    <p class="text-stone-400 text-sm mt-1">Pre-order your favorite stone-baked bites and brews to have them ready upon arrival.</p>
+                    <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Baked, Brewed & Loved</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">The Moh Maya Menu</h2>
+                    <p class="text-stone-400 text-sm mt-1">Pre-order your favourites so they're fresh on the table when you walk in.</p>
                 </div>
 
                 <!-- Category Filter Tabs -->
                 <div class="flex items-center gap-2 overflow-x-auto pb-2" id="menu-category-tabs">
-                    <button onclick="filterMenu('all', this)" class="menu-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap wood-texture border border-amber-500/50 text-amber-200">All Craft</button>
-                    <button onclick="filterMenu('coffee', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Artisanal Coffee</button>
-                    <button onclick="filterMenu('bites', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Stone-Baked Bites</button>
-                    <button onclick="filterMenu('shakes', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Handcrafted Shakes</button>
-                    <button onclick="filterMenu('genz', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Gen-Z Specials</button>
+                    <button onclick="filterMenu('all', this)" class="menu-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap wood-texture border border-amber-500/50 text-amber-200">Everything</button>
+                    <button onclick="filterMenu('coffee', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-stone-100">Coffee & More</button>
+                    <button onclick="filterMenu('bites', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-stone-100">Pizza & Bites</button>
+                    <button onclick="filterMenu('bakery', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-stone-100">Bakery & Bento Cakes</button>
+                    <button onclick="filterMenu('shakes', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-stone-100">Shakes & Coolers</button>
                 </div>
             </div>
 
@@ -572,110 +653,99 @@
             </div>
         </section>
 
-
-        <!-- CAFE VIBE & ATMOSPHERE GALLERY -->
+        <!-- CAFE VIBE & GALLERY -->
         <section id="vibe-gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
             <div class="text-center space-y-3 mb-12">
-                <span class="text-xs uppercase tracking-widest text-moss-400 font-semibold">The Ambience</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Wooden & Stone Sanctuary</h2>
+                <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">The Ambience</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Pretty Corners, Peaceful Vibes</h2>
                 <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
-                    Designed with natural reclaimed timbers, warm amber mood lights, and river stones for an unhurried cafe experience.
+                    The corner everyone photographs, the table every bestie trio fights for — come see why Prayagraj calls this its hidden gem.
                 </p>
             </div>
 
-            <!-- Gallery Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                <div class="wood-texture rounded-2xl overflow-hidden group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800"
-                             alt="Wooden Nooks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full moss-badge text-moss-200">Reclaimed Wood</span>
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800" alt="Cafe seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3d2b1f]/50 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-terracotta font-semibold">The Adda Corner</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="font-serif text-lg font-bold text-amber-100">Walnut & Oak Nooks</h3>
-                        <p class="text-xs text-stone-400 mt-1">Deep stained reclaimed wooden booths crafted for quiet conversations and book lovers.</p>
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Slow Coffee Corners</h3>
+                        <p class="text-xs text-stone-400 mt-1">Sink in with a cappuccino and nowhere else to be — our favourite kind of plan.</p>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                <div class="wood-texture rounded-2xl overflow-hidden group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
-                             alt="Stone Hearth" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full stone-texture text-amber-300">River Stone Hearth</span>
+                        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800" alt="Cafe window seat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3d2b1f]/50 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-amber-600 font-semibold">Window Wali Seat</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="font-serif text-lg font-bold text-amber-100">Stone Hearth Corner</h3>
-                        <p class="text-xs text-stone-400 mt-1">Authentic slate and smooth river pebbles creating a warm, grounded tactile energy.</p>
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Sunshine & Street Views</h3>
+                        <p class="text-xs text-stone-400 mt-1">The window seat is the most booked corner on this page — for good reason.</p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                <div class="wood-texture rounded-2xl overflow-hidden group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800"
-                             alt="Candlelight Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-amber-900/60 text-amber-200">Sunset Candle Glow</span>
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=800" alt="Coffee and cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3d2b1f]/50 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-blush font-semibold">Bakery Counter</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="font-serif text-lg font-bold text-amber-100">Candlelit Alcove</h3>
-                        <p class="text-xs text-stone-400 mt-1">Soft amber warm lighting perfect for romantic dates, friend reunions, and Gen-Z chill.</p>
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Fresh From the Bakery</h3>
+                        <p class="text-xs text-stone-400 mt-1">Bento cakes, pastries and bakes — including eggless favourites — at the counter daily.</p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                <div class="wood-texture rounded-2xl overflow-hidden group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?auto=format&fit=crop&q=80&w=800"
-                             alt="Vine Terrace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full moss-badge text-moss-200">Lush Vines</span>
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=800" alt="Cafe evening vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#3d2b1f]/50 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-white/90 text-moss-300 font-semibold">Evening Vibe</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="font-serif text-lg font-bold text-amber-100">Greenery Balcony</h3>
-                        <p class="text-xs text-stone-400 mt-1">Overhanging vines and potted botanical flora providing fresh oxygenated atmosphere.</p>
+                        <h3 class="font-serif text-lg font-bold text-stone-100">Golden-Hour Hangouts</h3>
+                        <p class="text-xs text-stone-400 mt-1">Warm light, cold coffee, long conversations — evenings here run on their own clock.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Reviews Snippet -->
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400">
+                <div class="stone-texture p-5 rounded-2xl text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-500">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-stone-300 italic">"The dark wooden tables and stone counter give Moh Maya such a serene earthy vibe in Katra. The cover calculation is super smooth!"</p>
-                    <div class="font-semibold text-amber-200 text-sm">— Ananya S., University student</div>
+                    <p class="text-stone-300 italic">"The prettiest corner in Katra. We booked online and our table + cold coffee were ready when we walked in."</p>
+                    <div class="font-semibold text-stone-100 text-sm">— A regular bestie trio</div>
                 </div>
-                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400">
+                <div class="stone-texture p-5 rounded-2xl text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-500">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-stone-300 italic">"Best cold coffee in Prayagraj. Booking online saved us from waiting during peak evening hours!"</p>
-                    <div class="font-semibold text-amber-200 text-sm">— Rohit K., Regular patron</div>
+                    <p class="text-stone-300 italic">"Did the bento cake workshop with my cousins — frosting, photos and so much laughter. Best weekend plan in Prayagraj."</p>
+                    <div class="font-semibold text-stone-100 text-sm">— Workshop guest</div>
                 </div>
-                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
-                    <div class="flex items-center gap-1 text-amber-400">
+                <div class="stone-texture p-5 rounded-2xl text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-500">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-stone-300 italic">"The stone baked garlic bread and walnut table corner made our anniversary evening memorable. Highly recommended."</p>
-                    <div class="font-semibold text-amber-200 text-sm">— Priya & Siddharth</div>
+                    <p class="text-stone-300 italic">"Peaceful vibe, gorgeous photos, pizza and coffee done right. Our whole group's default adda now."</p>
+                    <div class="font-semibold text-stone-100 text-sm">— Cafe-hopping creator</div>
                 </div>
             </div>
         </section>
 
-
         <!-- MY BOOKINGS TRACKER -->
         <section id="my-bookings" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-            <div class="wood-texture p-6 sm:p-10 rounded-3xl border border-wood-700/50">
+            <div class="wood-texture p-6 sm:p-10 rounded-3xl">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                     <div>
-                        <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Your History</span>
-                        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-stone-100">My Pre-Booked Eco Tables</h2>
+                        <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Your History</span>
+                        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-stone-100">My Pre-Booked Tables</h2>
                     </div>
                     <button onclick="clearUserBookings()" class="text-xs text-stone-400 hover:text-terracotta underline">Clear My Local History</button>
                 </div>
@@ -689,92 +759,98 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-stone-950 border-t border-wood-800/80 pt-12 pb-8 z-10 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer class="bg-[#33241a] text-[#f7e8d0] pt-12 pb-8 z-10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start justify-between gap-8">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full wood-texture flex items-center justify-center border border-amber-500/40">
-                    <i class="fa-solid font-serif text-xl text-amber-500">M</i>
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-terracotta flex items-center justify-center">
+                    <i class="fa-solid font-serif text-xl text-white">M</i>
                 </div>
                 <div>
-                    <div class="font-serif text-lg font-bold text-stone-200">Moh Maya Cafe</div>
-                    <div class="text-xs text-stone-400">Main Market Road, Near Science Faculty, Katra, Prayagraj</div>
+                    <div class="font-serif text-lg font-bold">Moh Maya Cafe</div>
+                    <div class="text-xs text-[#cbb894]">46/12 Master Zaharul Husan Road, Katra, Prayagraj 211002</div>
                 </div>
             </div>
 
-            <div class="text-xs text-stone-400 text-center md:text-right space-y-1">
-                <div>© 2026 Moh Maya Cafe Prayagraj. Handcrafted Eco-Luxe Experience.</div>
-                <div class="text-amber-500/80">Open Daily: 11:00 AM – 11:00 PM • Eco-Table Pre-booking Engine</div>
+            <div class="text-xs space-y-1.5">
+                <div><i class="fa-solid fa-phone text-amber-400 mr-2"></i><a href="tel:+919219294961" class="hover:underline">+91 92192 94961</a></div>
+                <div><i class="fa-solid fa-envelope text-amber-400 mr-2"></i><a href="mailto:cafemohmaya@gmail.com" class="hover:underline">cafemohmaya@gmail.com</a></div>
+                <div><i class="fa-brands fa-instagram text-amber-400 mr-2"></i><a href="https://www.instagram.com/_moh______maya/" target="_blank" rel="noopener" class="hover:underline">@_moh______maya</a></div>
+                <div><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i><a href="https://www.google.com/maps/search/?api=1&query=Moh+Maya+Cafe+Katra+Prayagraj" target="_blank" rel="noopener" class="hover:underline">Get Directions on Google Maps</a></div>
+            </div>
+
+            <div class="text-xs text-[#cbb894] text-left md:text-right space-y-1">
+                <div>© 2026 Moh Maya Cafe, Prayagraj. Made with love & a little maya.</div>
+                <div class="text-amber-400/90">Open Daily: 11:00 AM – 11:00 PM • Table Pre-booking</div>
             </div>
         </div>
     </footer>
 
-
     <!-- MODALS & OVERLAYS -->
 
     <!-- Payment Modal (UPI QR) -->
-    <div id="payment-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="wood-texture max-w-md w-full rounded-3xl p-6 sm:p-8 border border-moss-500/40 relative shadow-2xl my-8">
+    <div id="payment-modal" class="fixed inset-0 z-50 bg-[#33241a]/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="wood-texture max-w-md w-full rounded-3xl p-6 sm:p-8 relative shadow-2xl my-8">
             <div class="text-center space-y-2 mb-5">
-                <div class="w-14 h-14 rounded-full moss-badge text-moss-300 flex items-center justify-center mx-auto text-2xl border border-moss-400/40">
+                <div class="w-14 h-14 rounded-full moss-badge flex items-center justify-center mx-auto text-2xl">
                     <i class="fa-solid fa-qrcode"></i>
                 </div>
-                <h3 class="font-serif text-2xl font-bold text-amber-200">Pay via UPI</h3>
+                <h3 class="font-serif text-2xl font-bold text-stone-100">Pay via UPI</h3>
                 <p class="text-xs text-stone-400">Kisi bhi UPI app (Paytm / PhonePe / Google Pay / BHIM) se QR scan karke payment karo</p>
             </div>
 
-            <div class="bg-white rounded-2xl p-3 mx-auto max-w-[300px]">
-                <img src="assets/paytm-qr.svg" alt="Moh Maya Cafe Paytm UPI QR — Mrityunjay Mishra" class="w-full h-auto rounded-lg">
+            <div class="bg-white rounded-2xl p-3 mx-auto max-w-[300px] border border-[#f0dfc0]">
+                <img src="assets/paytm-qr.svg" alt="Moh Maya Cafe Paytm UPI QR" class="w-full h-auto rounded-lg">
             </div>
-            <p class="text-center text-xs text-stone-300 mt-3">UPI ID: <span class="font-mono font-bold text-amber-300">9506605427@ptyes</span> (Mrityunjay Mishra)</p>
+            <p class="text-center text-xs text-stone-300 mt-3">UPI ID: <span class="font-mono font-bold text-terracotta">9506605427@ptyes</span></p>
 
-            <div class="paper-texture p-4 rounded-2xl border border-wood-700 text-sm space-y-2 font-mono text-stone-300 mt-5">
-                <div class="flex justify-between"><span class="text-stone-400">Booking Code:</span><span id="pay-modal-code" class="font-bold text-amber-300">—</span></div>
+            <div class="paper-texture p-4 rounded-2xl border border-[#e8d3ae] text-sm space-y-2 font-mono text-stone-300 mt-5">
+                <div class="flex justify-between"><span class="text-stone-400">Booking Code:</span><span id="pay-modal-code" class="font-bold text-terracotta">—</span></div>
                 <div class="flex justify-between"><span class="text-stone-400">Name:</span><span id="pay-modal-name" class="font-bold text-stone-100">—</span></div>
-                <div class="flex justify-between items-center border-t border-stone-700/60 pt-2"><span class="text-stone-300 font-bold">Amount to Pay:</span><span id="pay-modal-amount" class="text-2xl font-bold text-moss-400">₹0</span></div>
+                <div class="flex justify-between items-center border-t border-[#e8d3ae] pt-2"><span class="text-stone-300 font-bold">Amount to Pay:</span><span id="pay-modal-amount" class="text-2xl font-bold text-moss-400">₹0</span></div>
             </div>
 
-            <div class="text-[11px] text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2 mt-4">
-                <i class="fa-solid fa-clock text-amber-500 mt-0.5"></i>
-                <p>Payment ke baad neeche wala button dabao. Tumhari booking <b class="text-amber-300">Payment Verification Pending</b> rahegi — cafe owner apne UPI me payment milna check karke verify (tick) karega, tabhi booking <b class="text-moss-300">Confirmed</b> hogi. Bina owner ke tick ke booking aage nahi badhegi.</p>
+            <div class="text-[11px] text-stone-400 bg-[#fdf1dc] p-3 rounded-xl border border-[#f0dfc0] flex items-start gap-2 mt-4">
+                <i class="fa-solid fa-clock text-terracotta mt-0.5"></i>
+                <p>Payment ke baad neeche wala button dabao. Tumhari booking <b class="text-amber-600">Payment Verification Pending</b> rahegi — cafe owner apne UPI me payment milna check karke verify (tick) karega, tabhi booking <b class="text-moss-300">Confirmed</b> hogi. Bina owner ke tick ke booking aage nahi badhegi.</p>
             </div>
 
             <button onclick="handlePaymentDone()" class="w-full mt-5 py-4 rounded-xl bg-gradient-to-r from-moss-700 via-moss-500 to-moss-700 text-white font-bold text-base shadow-xl hover:brightness-110 transition active:scale-95 flex items-center justify-center gap-2">
                 <i class="fa-solid fa-check"></i> Payment Kar Diya — Verify Ke Liye Bhejo
             </button>
-            <button onclick="cancelPayment()" class="w-full mt-2 py-2.5 rounded-xl stone-texture text-stone-300 text-xs font-semibold border border-stone-700 hover:border-terracotta">
+            <button onclick="cancelPayment()" class="w-full mt-2 py-2.5 rounded-xl stone-texture text-stone-300 text-xs font-semibold hover:border-terracotta">
                 Cancel — Payment Nahi Kiya
             </button>
         </div>
     </div>
 
     <!-- Booking Confirmation Receipt Modal -->
-    <div id="receipt-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
-        <div class="wood-texture max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-amber-500/40 relative shadow-2xl my-8">
-            <button onclick="closeReceiptModal()" class="absolute top-4 right-4 text-stone-400 hover:text-white text-xl">
+    <div id="receipt-modal" class="fixed inset-0 z-50 bg-[#33241a]/75 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="wood-texture max-w-lg w-full rounded-3xl p-6 sm:p-8 relative shadow-2xl my-8">
+            <button onclick="closeReceiptModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-100 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="text-center space-y-2 mb-6">
-                <div class="w-14 h-14 rounded-full moss-badge text-moss-300 flex items-center justify-center mx-auto text-2xl border border-moss-400/40">
-                    <i class="fa-solid fa-leaf"></i>
+                <div class="w-14 h-14 rounded-full moss-badge flex items-center justify-center mx-auto text-2xl">
+                    <i class="fa-solid fa-cake-candles"></i>
                 </div>
-                <h3 id="receipt-title" class="font-serif text-2xl font-bold text-amber-200">Table Reservation Locked!</h3>
+                <h3 id="receipt-title" class="font-serif text-2xl font-bold text-stone-100">Table Reservation Locked!</h3>
                 <p class="text-xs text-stone-400">Show this digital token upon arrival at Moh Maya Cafe</p>
             </div>
 
             <!-- Digital Receipt Box -->
-            <div id="receipt-card-content" class="paper-texture p-5 rounded-2xl border border-wood-700 text-xs space-y-3 font-mono text-stone-300">
+            <div id="receipt-card-content" class="paper-texture p-5 rounded-2xl border border-[#e8d3ae] text-xs space-y-3 font-mono text-stone-300">
                 <!-- Javascript fills this -->
             </div>
 
             <div class="mt-6 flex gap-3">
-                <button onclick="copyBookingCode()" class="flex-1 py-3 rounded-xl stone-texture text-amber-300 text-xs font-semibold hover:border-amber-500 border border-stone-700">
+                <button onclick="copyBookingCode()" class="flex-1 py-3 rounded-xl stone-texture text-amber-300 text-xs font-semibold hover:border-amber-500">
                     <i class="fa-solid fa-copy mr-1"></i> Copy Code
                 </button>
                 <button id="receipt-print-btn" onclick="printBillForLatest()" class="flex-1 py-3 rounded-xl bg-moss-700 text-white text-xs font-bold hover:bg-moss-600 hidden">
                     <i class="fa-solid fa-print mr-1"></i> Print Bill / Bill Print Karo
                 </button>
-                <button onclick="closeReceiptModal()" class="flex-1 py-3 rounded-xl bg-amber-500 text-stone-950 text-xs font-bold hover:bg-amber-400">
+                <button onclick="closeReceiptModal()" class="flex-1 py-3 rounded-xl bg-amber-500 text-white text-xs font-bold hover:bg-amber-600">
                     Done & View Bookings
                 </button>
             </div>
@@ -783,56 +859,56 @@
 
 
     <!-- Admin Dashboard Modal -->
-    <div id="admin-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="wood-texture max-w-5xl w-full max-h-[90vh] rounded-3xl p-6 sm:p-8 border border-wood-600 relative overflow-hidden flex flex-col">
+    <div id="admin-modal" class="fixed inset-0 z-50 bg-[#33241a]/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="wood-texture max-w-5xl w-full max-h-[90vh] rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col">
 
             <!-- Admin Header -->
-            <div class="flex items-center justify-between pb-4 border-b border-wood-700">
+            <div class="flex items-center justify-between pb-4 border-b border-[#e8d3ae]">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-terracotta flex items-center justify-center">
                         <i class="fa-solid fa-user-shield text-lg"></i>
                     </div>
                     <div>
-                        <h3 class="font-serif text-xl font-bold text-amber-100">Cafe Owner Admin Dashboard</h3>
+                        <h3 class="font-serif text-xl font-bold text-stone-100">Cafe Owner Admin Dashboard</h3>
                         <p class="text-xs text-stone-400">Moh Maya Cafe Katra Prayagraj • Live System View</p>
                     </div>
                 </div>
-                <button onclick="toggleAdminModal()" class="text-stone-400 hover:text-white text-2xl">
+                <button onclick="toggleAdminModal()" class="text-stone-400 hover:text-stone-100 text-2xl">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
             <!-- Admin Stats Bar -->
             <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 my-6">
-                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                <div class="stone-texture p-4 rounded-2xl">
                     <div class="text-xs text-stone-400">Total Pre-Bookings</div>
-                    <div id="admin-stat-count" class="text-2xl font-bold text-amber-300 mt-1">0</div>
+                    <div id="admin-stat-count" class="text-2xl font-bold text-terracotta mt-1">0</div>
                 </div>
-                <div class="stone-texture p-4 rounded-2xl border border-amber-500/50">
-                    <div class="text-xs text-amber-300">Pending Verification</div>
-                    <div id="admin-stat-pending" class="text-2xl font-bold text-amber-400 mt-1">0</div>
+                <div class="stone-texture p-4 rounded-2xl border border-amber-500/60">
+                    <div class="text-xs text-amber-600 font-semibold">Pending Verification</div>
+                    <div id="admin-stat-pending" class="text-2xl font-bold text-amber-600 mt-1">0</div>
                 </div>
-                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                <div class="stone-texture p-4 rounded-2xl">
                     <div class="text-xs text-stone-400">Total Cover Online Paid</div>
                     <div id="admin-stat-revenue" class="text-2xl font-bold text-moss-400 mt-1">₹0</div>
                 </div>
-                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                <div class="stone-texture p-4 rounded-2xl">
                     <div class="text-xs text-stone-400">Girls Party Cover</div>
                     <div id="admin-stat-girls" class="text-2xl font-bold text-stone-200 mt-1">0</div>
                 </div>
-                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                <div class="stone-texture p-4 rounded-2xl">
                     <div class="text-xs text-stone-400">Boys Party Cover</div>
                     <div id="admin-stat-boys" class="text-2xl font-bold text-terracotta mt-1">0</div>
                 </div>
             </div>
 
-            <div class="text-[11px] text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2 mb-4">
-                <i class="fa-solid fa-shield-halved text-amber-500 mt-0.5"></i>
-                <p><b class="text-amber-300">Payment Verification Gate:</b> "Payment Verification Pending" wali booking pe pehle apne Paytm/UPI me paisa aana check karo. Paisa mil gaya ho to green <b class="text-moss-300">✔ Payment Received — Verify</b> button dabao — tabhi booking Confirmed hogi. Paisa nahi aaya ho to Reject karo.</p>
+            <div class="text-[11px] text-stone-400 bg-[#fdf1dc] p-3 rounded-xl border border-[#f0dfc0] flex items-start gap-2 mb-4">
+                <i class="fa-solid fa-shield-halved text-terracotta mt-0.5"></i>
+                <p><b class="text-amber-600">Payment Verification Gate:</b> "Payment Verification Pending" wali booking pe pehle apne Paytm/UPI me paisa aana check karo. Paisa mil gaya ho to green <b class="text-moss-300">✔ Payment Received — Verify</b> button dabao — tabhi booking Confirmed hogi. Paisa nahi aaya ho to Reject karo.</p>
             </div>
 
             <!-- Admin Content Tabs -->
-            <div class="flex items-center space-x-4 border-b border-wood-700/60 pb-2 mb-4 text-xs font-semibold">
+            <div class="flex items-center space-x-4 border-b border-[#e8d3ae] pb-2 mb-4 text-xs font-semibold">
                 <button onclick="switchAdminTab('bookings')" id="tab-btn-bookings" class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40">Manage Customer Bookings</button>
                 <button onclick="switchAdminTab('menu')" id="tab-btn-menu" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200">Menu Dish Manager</button>
             </div>
@@ -841,7 +917,7 @@
             <div id="admin-tab-bookings" class="flex-1 overflow-y-auto space-y-4 pr-1">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs text-stone-300">
-                        <thead class="bg-stone-900/90 text-amber-200 uppercase tracking-wider text-[10px]">
+                        <thead class="bg-[#fff7ec] text-stone-200 uppercase tracking-wider text-[10px]">
                             <tr>
                                 <th class="p-3">Code / Name</th>
                                 <th class="p-3">Slot & Corner</th>
@@ -852,7 +928,7 @@
                                 <th class="p-3 text-right">Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="admin-bookings-tbody" class="divide-y divide-stone-800">
+                        <tbody id="admin-bookings-tbody" class="divide-y divide-[#f0dfc0]">
                             <!-- JS fills admin rows -->
                         </tbody>
                     </table>
@@ -862,8 +938,8 @@
             <!-- Tab 2: Menu Manager -->
             <div id="admin-tab-menu" class="hidden flex-1 overflow-y-auto space-y-4 pr-1">
                 <div class="flex items-center justify-between">
-                    <span class="text-xs text-stone-400">Toggle dish availability or add custom eco-bites</span>
-                    <button onclick="promptAddNewDish()" class="px-3 py-1.5 rounded-xl bg-moss-700 hover:bg-moss-600 text-stone-100 text-xs font-medium">
+                    <span class="text-xs text-stone-400">Toggle dish availability or add custom dishes</span>
+                    <button onclick="promptAddNewDish()" class="px-3 py-1.5 rounded-xl bg-moss-700 hover:bg-moss-600 text-white text-xs font-medium">
                         + Add Custom Menu Item
                     </button>
                 </div>
@@ -888,14 +964,22 @@
         const STATUS_REJECTED = 'Rejected';
         const STORAGE_KEY = 'mohMaya_userBookings';
 
-        // Sample Organic Eco Menu Data
+        // Moh Maya menu — items from the cafe Instagram presence; prices are placeholders
         let menuData = [
-            { id: 'm1', name: 'Raw Walnut Cold Brew', category: 'coffee', price: 180, desc: 'Steeped for 18 hrs, infused with crushed walnut roast.', img: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=600', available: true },
-            { id: 'm2', name: 'Stone-Hearth Garlic Focaccia', category: 'bites', price: 240, desc: 'Hand-kneaded dough baked on hot river slate tiles.', img: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&q=80&w=600', available: true },
-            { id: 'm3', name: 'Hazelnut Dark Clay Shake', category: 'shakes', price: 220, desc: 'Organic cocoa and crushed hazelnuts served in terra clay.', img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=600', available: true },
-            { id: 'm4', name: 'Katra Sunset Cappuccino', category: 'coffee', price: 160, desc: 'Double espresso shot with hand-whipped oat milk dusting.', img: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600', available: true },
-            { id: 'm5', name: 'Gen-Z Truffle Cheese Fries', category: 'genz', price: 210, desc: 'Hand-cut organic potatoes tossed in truffle oil & paprika.', img: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&q=80&w=600', available: true },
-            { id: 'm6', name: 'Smoked Wood Woodfired Pizza', category: 'bites', price: 340, desc: 'Fresh basil leaves, bocconcini cheese, oak-smoked crust.', img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600', available: true }
+            { id: 'm1', name: 'Cappuccino', category: 'coffee', price: 150, desc: 'Double-shot espresso under steamed-milk foam — the adda essential.', img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm2', name: 'Cold Coffee', category: 'coffee', price: 170, desc: 'Blended chilled coffee, lightly sweet — Prayagraj summers approved.', img: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm3', name: 'Cafe Mocha', category: 'coffee', price: 180, desc: 'Espresso meets chocolate, topped with whipped cream.', img: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm4', name: 'Farmhouse Veg Pizza', category: 'bites', price: 299, desc: 'Loaded garden veggies and mozzarella on a crisp hand-tossed base.', img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm5', name: 'Cheese Burst Burger', category: 'bites', price: 149, desc: 'Crunchy patty, molten cheese and house sauce in a toasted bun.', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm6', name: 'Peri Peri Fries', category: 'bites', price: 129, desc: 'Golden fries dusted with fiery peri peri spice.', img: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm7', name: 'White Sauce Pasta', category: 'bites', price: 199, desc: 'Creamy, cheesy penne with exotic herbs — a bestie-table favourite.', img: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm8', name: 'Masala Maggi', category: 'bites', price: 99, desc: 'Hostel-style masala maggi with veggies — pure nostalgia.', img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm9', name: 'Bento Cake', category: 'bakery', price: 349, desc: 'Our signature mini cake — star of the Paint-Your-Own Bento Cake workshops. Eggless options available.', img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm10', name: 'Choco Truffle Pastry', category: 'bakery', price: 90, desc: 'Rich, dark chocolate layers from our in-house bakery counter.', img: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm11', name: 'Berry Panna Cotta', category: 'bakery', price: 160, desc: 'Silky set cream with a tangy berry compote — light and pretty.', img: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm12', name: 'KitKat Shake', category: 'shakes', price: 199, desc: 'Thick chocolate shake crowned with wafer crunch.', img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm13', name: 'Virgin Mint Mojito', category: 'shakes', price: 129, desc: 'Mint, lime and soda fizz — the freshest sip on the table.', img: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm14', name: 'Peach Iced Tea', category: 'shakes', price: 99, desc: 'Chilled peach tea, perfect for slow afternoons.', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600', available: true }
         ];
 
         // State variables
@@ -967,7 +1051,7 @@
 
         function initAmbientParticles() {
             const container = document.getElementById('ambient-particles');
-            const icons = ['fa-leaf', 'fa-seedling', 'fa-fire'];
+            const icons = ['fa-heart', 'fa-star', 'fa-mug-hot'];
             for (let i = 0; i < 15; i++) {
                 const particle = document.createElement('i');
                 const randomIcon = icons[Math.floor(Math.random() * icons.length)];
@@ -1065,7 +1149,7 @@
                 card.innerHTML = `
                     <div class="space-y-3">
                         <div class="h-40 rounded-xl overflow-hidden relative">
-                            <img src="${item.img}" alt="${escapeHtml(item.name)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/2c1e14/e0d2c3?text=${encodeURIComponent(item.name)}'">
+                            <img src="${item.img}" alt="${escapeHtml(item.name)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/fdf1dc/9a3412?text=${encodeURIComponent(item.name)}'">
                             <span class="absolute top-2 right-2 text-xs font-bold px-2.5 py-1 rounded-full stone-texture text-amber-300 border border-stone-700">₹${item.price}</span>
                         </div>
                         <div>
@@ -1142,7 +1226,7 @@
             const balanceAtCafe = Math.max(0, preorderTotal - minCover);
 
             const randomHex = Math.floor(100000 + Math.random() * 900000);
-            const code = `MM-ECO-${randomHex}`;
+            const code = `MM-${randomHex}`;
             latestBookingCode = code;
 
             const now = Date.now();
@@ -1409,7 +1493,8 @@
             document.getElementById('bill-print-area').innerHTML = `
                 <div style="text-align:center; border-bottom:2px dashed #333; padding-bottom:10px;">
                     <div style="font-size:24px; font-weight:bold; letter-spacing:1px;">MOH MAYA CAFE</div>
-                    <div style="font-size:12px;">Main Market Road, Near Science Faculty, Katra, Prayagraj</div>
+                    <div style="font-size:12px;">46/12 Master Zaharul Husan Road, Katra, Prayagraj 211002</div>
+                    <div style="font-size:12px;">Phone: +91 92192 94961</div>
                     <div style="font-size:12px;">Open Daily: 11:00 AM – 11:00 PM</div>
                     <div style="font-size:16px; font-weight:bold; margin-top:8px;">— BILL —</div>
                 </div>
@@ -1652,14 +1737,14 @@
             const name = prompt("Enter Dish Name:");
             if (!name) return;
             const price = parseInt(prompt("Enter Price (₹):") || "150");
-            const category = prompt("Category (coffee/bites/shakes/genz):", "bites") || "bites";
+            const category = prompt("Category (coffee/bites/bakery/shakes):", "bites") || "bites";
 
             const newDish = {
                 id: 'm' + Date.now(),
                 name,
                 category,
                 price,
-                desc: 'Handcrafted eco special prepared fresh at Moh Maya.',
+                desc: 'Fresh Moh Maya special, made to order.',
                 img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600',
                 available: true
             };
@@ -1672,6 +1757,6 @@
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         }
-    </script>
+</script>
 </body>
 </html>
