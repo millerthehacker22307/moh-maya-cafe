@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moh Maya Cafe | Eco-Luxe Organic Pre-Booking, Katra Prayagraj</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            900: '#1c130d',
+                            800: '#2c1e14',
+                            700: '#3d2b1f',
+                            600: '#523a2b',
+                            500: '#73523d',
+                            300: '#a68263',
+                            100: '#e0d2c3'
+                        },
+                        stone: {
+                            950: '#0c0d0e',
+                            900: '#14171a',
+                            800: '#21262b',
+                            700: '#363d45',
+                            600: '#4d5660',
+                            300: '#9faab5',
+                            100: '#f0f3f5'
+                        },
+                        moss: {
+                            900: '#1b2d18',
+                            700: '#2d4a27',
+                            500: '#4b7342',
+                            400: '#6b9c5f',
+                            200: '#b8d6af'
+                        },
+                        amberGlow: '#d97706',
+                        terracotta: '#c86d51',
+                        paper: '#f5efe6'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Eco-Luxe Organic Styles */
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0c0d0e;
+            color: #f0f3f5;
+            overflow-x: hidden;
+            background-image: radial-gradient(rgba(45, 74, 39, 0.08) 1px, transparent 1px), radial-gradient(rgba(217, 119, 6, 0.05) 1px, #0c0d0e 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Wood Grain & Stone Overlay effects */
+        .wood-texture {
+            background: linear-gradient(135deg, rgba(44, 30, 20, 0.95) 0%, rgba(28, 19, 13, 0.98) 100%),
+                        radial-gradient(circle at 50% 0%, rgba(212, 163, 115, 0.15), transparent 70%);
+            border: 1px solid rgba(115, 82, 61, 0.3);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .stone-texture {
+            background: linear-gradient(145deg, #1d2228, #14171a);
+            border: 1px solid rgba(77, 86, 96, 0.4);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+        }
+
+        .paper-texture {
+            background-color: #171513;
+            background-image: radial-gradient(#2c1e14 0.75px, transparent 0.75px);
+            background-size: 12px 12px;
+        }
+
+        .amber-glow-effect {
+            box-shadow: 0 0 25px rgba(217, 119, 6, 0.25);
+        }
+
+        .moss-badge {
+            background: linear-gradient(135deg, #2d4a27 0%, #1b2d18 100%);
+            border: 1px solid rgba(107, 156, 95, 0.4);
+        }
+
+        /* Ambient floating leaf animation */
+        @keyframes floatLeaf {
+            0% { transform: translateY(0px) rotate(0deg) translateX(0px); opacity: 0; }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) rotate(360deg) translateX(50px); opacity: 0; }
+        }
+
+        .leaf-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            color: #4b7342;
+            opacity: 0.3;
+            animation: floatLeaf 18s linear infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0d0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3d2b1f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #523a2b;
+        }
+
+        /* ============ PRINTABLE BILL ============ */
+        #bill-print-area {
+            display: none;
+        }
+        @media print {
+            body * {
+                visibility: hidden !important;
+            }
+            #bill-print-area, #bill-print-area * {
+                visibility: visible !important;
+            }
+            #bill-print-area {
+                display: block !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                color: #111111;
+                font-family: 'Courier New', monospace;
+                padding: 24px;
+            }
+            #bill-print-area table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            #bill-print-area td, #bill-print-area th {
+                padding: 4px 2px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-moss-500 selection:text-white relative">
+
+    <!-- Ambient Floating Particles (Leaves/Embers) -->
+    <div id="ambient-particles" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+    <!-- MAIN HEADER & ECO-LUXE BRAND BAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-stone-950/80 border-b border-wood-700/40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-full wood-texture flex items-center justify-center border border-moss-500/50 group-hover:border-amber-500 transition-colors">
+                    <i class="fa-solid font-serif text-2xl text-amber-500 group-hover:scale-110 transition-transform">M</i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-wider text-amber-100 flex items-center gap-2">
+                        MOH MAYA <span class="text-xs px-2 py-0.5 rounded-full moss-badge text-moss-200 uppercase font-sans font-medium tracking-normal">Eco Luxe</span>
+                    </span>
+                    <p class="text-xs text-wood-300 tracking-widest uppercase">Katra • Prayagraj</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-300">
+                <a href="#hero" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="#booking-engine" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-check text-moss-400 text-xs"></i> Pre-Book
+                </a>
+                <a href="#menu-section" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-utensils text-amber-500/70 text-xs"></i> Menu
+                </a>
+                <a href="#vibe-gallery" class="hover:text-amber-400 transition-colors">Vibe & Gallery</a>
+                <a href="#my-bookings" class="hover:text-amber-400 transition-colors flex items-center gap-1">
+                    My Bookings <span id="nav-bookings-count" class="bg-wood-700 text-amber-200 text-xs px-2 py-0.5 rounded-full">0</span>
+                </a>
+            </nav>
+
+            <!-- Quick Action & Admin Toggle -->
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleAdminModal()" class="px-3.5 py-1.5 text-xs rounded-lg stone-texture border border-stone-600/50 hover:border-amber-500/50 text-stone-300 hover:text-white transition">
+                    <i class="fa-solid fa-user-shield text-amber-500 mr-1.5"></i> Admin
+                </button>
+
+                <a href="#booking-engine" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-wood-600 via-wood-500 to-amber-700 text-white font-semibold text-sm shadow-lg hover:brightness-110 active:scale-95 transition hidden sm:flex items-center gap-2 border border-amber-500/30">
+                    <i class="fa-solid fa-chair text-amber-200"></i> Reserve Table
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-300 hover:text-white">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-b border-wood-800 px-6 py-4 space-y-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Home</a>
+            <a href="#booking-engine" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Pre-Book Table</a>
+            <a href="#menu-section" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Artisanal Menu</a>
+            <a href="#vibe-gallery" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">Eco-Vibe Gallery</a>
+            <a href="#my-bookings" onclick="toggleMobileMenu()" class="block text-stone-300 hover:text-amber-400 py-1">My Bookings</a>
+        </div>
+    </header>
+
+    <main class="z-10 relative space-y-24 pb-20">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
+            <!-- Background Image with Wood Grain Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1920"
+                     alt="Moh Maya Cafe Interior"
+                     class="w-full h-full object-cover opacity-25 filter contrast-125 brightness-75 scale-105 transform hover:scale-100 transition-transform duration-1000"
+                     onerror="this.src='https://placehold.co/1920x1080/1c130d/f0f3f5?text=Moh+Maya+Cafe+Prayagraj'">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-transparent to-stone-950/90"></div>
+            </div>
+
+            <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+                <!-- Eco Tag Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full moss-badge text-moss-200 text-xs sm:text-sm font-medium tracking-wide shadow-xl border border-moss-400/30 animate-pulse">
+                    <i class="fa-solid fa-leaf text-moss-400"></i>
+                    <span>Katra Prayagraj's Premier Eco-Luxe Sanctuary</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    <span class="text-amber-200 font-semibold">100% Organic Vibe</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-100 leading-tight">
+                    Where Raw Nature Meets <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-terracotta italic">Prayagraj's Gen-Z Vibe</span>
+                </h1>
+
+                <!-- Subtitle Description -->
+                <p class="max-w-2xl mx-auto text-stone-300 text-base sm:text-lg leading-relaxed font-light">
+                    Hand-carved reclaimed dark oak tables, smooth river stone hearths, artisanal micro-brews, and intimate candlelit nooks. Step away from the city hustle into pure, grounded serenity.
+                </p>
+
+                <!-- Value Props Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-stone-300 py-2">
+                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
+                        <i class="fa-solid fa-tree text-amber-500"></i> Reclaimed Wood Decor
+                    </span>
+                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-terracotta"></i> Stone Hearth Hearthside
+                    </span>
+                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
+                        <i class="fa-solid fa-mug-hot text-moss-400"></i> Cold Press & Brews
+                    </span>
+                    <span class="px-3 py-1.5 rounded-lg stone-texture border border-stone-700/60 flex items-center gap-2">
+                        <i class="fa-solid fa-coins text-amber-400"></i> 100% Cover Redeemable
+                    </span>
+                </div>
+
+                <!-- Action CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#booking-engine" class="w-full sm:w-auto px-8 py-4 rounded-xl wood-texture text-amber-100 font-semibold text-base border border-amber-500/40 hover:border-amber-400 amber-glow-effect hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-chair text-amber-400 text-lg"></i>
+                        <span>Book Your Wooden Table</span>
+                    </a>
+                    <a href="#menu-section" class="w-full sm:w-auto px-8 py-4 rounded-xl stone-texture text-stone-200 hover:text-white font-medium text-base border border-stone-600 hover:border-stone-400 hover:bg-stone-800 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open text-moss-400"></i>
+                        <span>Explore Organic Menu</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS STRIP -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
+            <div class="stone-texture rounded-3xl p-6 sm:p-8 border border-stone-700/60">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-amber-200 text-center mb-6">How It Works — Booking in 4 Simple Steps</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-amber-400 text-lg mb-2"><i class="fa-solid fa-chair"></i></div>
+                        <div class="text-sm font-semibold text-stone-100">1. Book Table</div>
+                        <p class="text-xs text-stone-400 mt-1">Date, slot, guests aur dishes choose karo.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-moss-400 text-lg mb-2"><i class="fa-solid fa-qrcode"></i></div>
+                        <div class="text-sm font-semibold text-stone-100">2. Pay via QR</div>
+                        <p class="text-xs text-stone-400 mt-1">Cafe ke Paytm UPI QR se amount pay karo.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-amber-400 text-lg mb-2"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="text-sm font-semibold text-stone-100">3. Owner Verifies Payment</div>
+                        <p class="text-xs text-stone-400 mt-1">Owner apne UPI me payment check karke tick karta hai.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-stone-900/70 border border-stone-800">
+                        <div class="w-11 h-11 mx-auto rounded-full wood-texture flex items-center justify-center text-terracotta text-lg mb-2"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div class="text-sm font-semibold text-stone-100">4. Confirmed + Bill</div>
+                        <p class="text-xs text-stone-400 mt-1">Booking confirm hoti hai aur bill print ho jata hai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRE-BOOKING ENGINE & LIVE COVER CALCULATOR -->
+        <section id="booking-engine" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold">Reserve Your Spot</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Eco-Table Pre-Booking</h2>
+                <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Adjust party size, lock in your preferred ambient slot, and pre-order dishes directly. Min cover charge is 100% redeemable against your food & beverage bill!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- Left Column: Booking Form -->
+                <div class="lg:col-span-7 wood-texture rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+
+                        <!-- Step 1: Date & Time Slot -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
+                                <i class="fa-regular fa-calendar-days text-amber-500 mr-2"></i>1. Select Date & Ambient Time Slot
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <input type="date" id="book-date" required class="w-full bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                                </div>
+                                <div>
+                                    <select id="book-slot" required onchange="calculateCover()" class="w-full bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                                        <option value="Afternoon Chill (12 PM - 4 PM)">Afternoon Chill (12 PM - 4 PM)</option>
+                                        <option value="Sunset Vibe (4 PM - 7 PM)" selected>Sunset Vibe (4 PM - 7 PM)</option>
+                                        <option value="Evening Glow (7 PM - 11 PM)">Evening Glow (7 PM - 11 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Guest Count Steppers -->
+                        <div class="border-t border-wood-700/50 pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
+                                <i class="fa-solid fa-users text-amber-500 mr-2"></i>2. Guest Breakdown (Cover Charges)
+                            </label>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- Girls Stepper -->
+                                <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 flex items-center justify-between">
+                                    <div>
+                                        <div class="text-sm font-semibold text-stone-200">Girls Party</div>
+                                        <div class="text-xs text-moss-400 font-medium">₹100 / person</div>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <button type="button" onclick="updateGuestCount('girls', -1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">-</button>
+                                        <span id="girls-count" class="font-semibold text-lg text-white w-6 text-center">1</span>
+                                        <button type="button" onclick="updateGuestCount('girls', 1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Boys Stepper -->
+                                <div class="bg-stone-900/80 border border-stone-800 rounded-2xl p-4 flex items-center justify-between">
+                                    <div>
+                                        <div class="text-sm font-semibold text-stone-200">Boys Party</div>
+                                        <div class="text-xs text-terracotta font-medium">₹300 / person</div>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <button type="button" onclick="updateGuestCount('boys', -1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">-</button>
+                                        <span id="boys-count" class="font-semibold text-lg text-white w-6 text-center">1</span>
+                                        <button type="button" onclick="updateGuestCount('boys', 1)" class="w-8 h-8 rounded-lg bg-wood-800 hover:bg-wood-700 text-amber-200 font-bold flex items-center justify-center border border-wood-600 transition">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Preferred Table Type -->
+                        <div class="border-t border-wood-700/50 pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
+                                <i class="fa-solid fa-couch text-amber-500 mr-2"></i>3. Select Wooden Table Corner
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="table-corner" value="Raw Walnut Nook" checked class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-tree text-base block mb-1"></i> Raw Walnut
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="table-corner" value="Stone Hearth Table" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-fire-burner text-base block mb-1"></i> Stone Hearth
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="table-corner" value="Vine Balcony" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-leaf text-base block mb-1"></i> Vine Balcony
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="table-corner" value="Candlelight Alcove" class="peer hidden">
+                                    <div class="p-3 text-center rounded-xl border border-stone-800 bg-stone-900/60 peer-checked:border-amber-500 peer-checked:bg-amber-500/10 peer-checked:text-amber-200 text-xs font-medium text-stone-400 transition">
+                                        <i class="fa-solid fa-candle-holder text-base block mb-1"></i> Candle Alcove
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Contact Information -->
+                        <div class="border-t border-wood-700/50 pt-6 space-y-4">
+                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-1 font-medium">
+                                <i class="fa-solid fa-id-card text-amber-500 mr-2"></i>4. Customer Details
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" id="cust-name" placeholder="Full Name" required class="bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                                <input type="tel" id="cust-phone" placeholder="Phone Number (10 digits)" required pattern="[0-9]{10}" class="bg-stone-900/90 border border-wood-600/60 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-500 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Payment Mode Selector -->
+                        <div class="border-t border-wood-700/50 pt-6">
+                            <label class="block text-xs uppercase tracking-wider text-amber-200/80 mb-3 font-medium">
+                                <i class="fa-solid fa-wallet text-amber-500 mr-2"></i>5. Payment Option
+                            </label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="pay-option" value="online" checked class="peer hidden">
+                                    <div class="p-3 border border-stone-800 bg-stone-900/60 rounded-xl text-center peer-checked:border-moss-500 peer-checked:bg-moss-900/40 peer-checked:text-moss-200 text-xs font-medium text-stone-300">
+                                        <i class="fa-solid fa-qrcode text-base block mb-1 text-moss-400"></i> Pay Now via UPI QR
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="pay-option" value="payAtCafe" class="peer hidden">
+                                    <div class="p-3 border border-stone-800 bg-stone-900/60 rounded-xl text-center peer-checked:border-amber-500 peer-checked:bg-amber-900/30 peer-checked:text-amber-200 text-xs font-medium text-stone-300">
+                                        <i class="fa-solid fa-store text-base block mb-1 text-amber-400"></i> Pay Min Cover at Counter
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="text-[11px] text-stone-400 mt-2">UPI se pay karne par booking tabhi confirm hogi jab cafe owner payment receive karke verify (tick) karega.</p>
+                        </div>
+
+                        <!-- Submit CTA -->
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-terracotta text-stone-950 font-bold text-base shadow-xl hover:brightness-110 transition active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check-circle"></i> Confirm Eco-Reservation
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Right Column: Live Cover & Pre-Order Summary Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="stone-texture rounded-3xl p-6 sm:p-8 border border-stone-700/60 shadow-2xl relative">
+                        <div class="flex items-center justify-between pb-4 border-b border-stone-800">
+                            <h3 class="font-serif text-xl font-bold text-amber-200">Live Cover Breakdown</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">100% Redeemable</span>
+                        </div>
+
+                        <!-- Cover Formula Items -->
+                        <div class="space-y-4 my-6 text-sm">
+                            <div class="flex justify-between items-center text-stone-300">
+                                <span id="summary-girls-label">Girls Cover (1 x ₹100):</span>
+                                <span id="summary-girls-val" class="font-semibold text-stone-100">₹100</span>
+                            </div>
+                            <div class="flex justify-between items-center text-stone-300">
+                                <span id="summary-boys-label">Boys Cover (1 x ₹300):</span>
+                                <span id="summary-boys-val" class="font-semibold text-stone-100">₹300</span>
+                            </div>
+
+                            <div class="flex justify-between items-center pt-3 border-t border-stone-800 text-amber-300 font-medium">
+                                <span>Minimum Cover Threshold:</span>
+                                <span id="summary-min-cover" class="font-bold text-base">₹400</span>
+                            </div>
+
+                            <!-- Pre-Order Items List directly in Cover Card -->
+                            <div class="pt-4 border-t border-stone-800 space-y-2">
+                                <div class="flex justify-between items-center text-xs text-stone-400 uppercase tracking-wider">
+                                    <span>Pre-Ordered Menu Items</span>
+                                    <a href="#menu-section" class="text-amber-400 hover:underline lowercase font-sans">+ add dishes</a>
+                                </div>
+                                <div id="summary-menu-items-list" class="space-y-1.5 max-h-36 overflow-y-auto pr-1 text-xs text-stone-300">
+                                    <p class="text-stone-500 italic py-2">No menu dishes added yet. Scroll to menu to pre-order snacks & brews!</p>
+                                </div>
+                                <div class="flex justify-between items-center pt-2 text-stone-200">
+                                    <span>Pre-Order Dishes Total:</span>
+                                    <span id="summary-preorder-total" class="font-semibold text-amber-400">₹0</span>
+                                </div>
+                            </div>
+
+                            <!-- Calculation Result -->
+                            <div class="p-4 rounded-2xl bg-stone-900/90 border border-wood-700/50 space-y-2 pt-4">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-stone-300 font-medium">Amount to Pay Now:</span>
+                                    <span id="summary-pay-now" class="text-2xl font-bold text-moss-400">₹400</span>
+                                </div>
+                                <div class="flex justify-between items-center text-xs text-stone-400">
+                                    <span>Remaining Balance at Cafe:</span>
+                                    <span id="summary-balance-at-cafe" class="font-semibold text-amber-300">₹0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule Notice -->
+                        <div class="text-xs text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2">
+                            <i class="fa-solid fa-circle-info text-amber-500 mt-0.5"></i>
+                            <p>If your pre-ordered menu dishes exceed the minimum cover, you pay the higher total now. If lower, you pay the minimum cover now and use the full amount at the cafe.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Support Banner -->
+                    <div class="wood-texture p-4 rounded-2xl border border-wood-700/40 flex items-center justify-between text-xs text-stone-300">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-stone-200">Need Custom Group Booking?</div>
+                                <div class="text-stone-400">+91 98765 43210 • Katra, Prayagraj</div>
+                            </div>
+                        </div>
+                        <a href="tel:9876543210" class="px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-200">Call</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ORGANIC MENU & PRE-ORDER SHOWCASE -->
+        <section id="menu-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-amber-500 font-semibold">Fresh & Handcrafted</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Artisanal Eco-Menu</h2>
+                    <p class="text-stone-400 text-sm mt-1">Pre-order your favorite stone-baked bites and brews to have them ready upon arrival.</p>
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-2" id="menu-category-tabs">
+                    <button onclick="filterMenu('all', this)" class="menu-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap wood-texture border border-amber-500/50 text-amber-200">All Craft</button>
+                    <button onclick="filterMenu('coffee', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Artisanal Coffee</button>
+                    <button onclick="filterMenu('bites', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Stone-Baked Bites</button>
+                    <button onclick="filterMenu('shakes', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Handcrafted Shakes</button>
+                    <button onclick="filterMenu('genz', this)" class="menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white">Gen-Z Specials</button>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript will dynamically render menu items here -->
+            </div>
+        </section>
+
+
+        <!-- CAFE VIBE & ATMOSPHERE GALLERY -->
+        <section id="vibe-gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs uppercase tracking-widest text-moss-400 font-semibold">The Ambience</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-stone-100">Wooden & Stone Sanctuary</h2>
+                <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Designed with natural reclaimed timbers, warm amber mood lights, and river stones for an unhurried cafe experience.
+                </p>
+            </div>
+
+            <!-- Gallery Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800"
+                             alt="Wooden Nooks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full moss-badge text-moss-200">Reclaimed Wood</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-amber-100">Walnut & Oak Nooks</h3>
+                        <p class="text-xs text-stone-400 mt-1">Deep stained reclaimed wooden booths crafted for quiet conversations and book lovers.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
+                             alt="Stone Hearth" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full stone-texture text-amber-300">River Stone Hearth</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-amber-100">Stone Hearth Corner</h3>
+                        <p class="text-xs text-stone-400 mt-1">Authentic slate and smooth river pebbles creating a warm, grounded tactile energy.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800"
+                             alt="Candlelight Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full bg-amber-900/60 text-amber-200">Sunset Candle Glow</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-amber-100">Candlelit Alcove</h3>
+                        <p class="text-xs text-stone-400 mt-1">Soft amber warm lighting perfect for romantic dates, friend reunions, and Gen-Z chill.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="wood-texture rounded-2xl overflow-hidden group border border-wood-700/40">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?auto=format&fit=crop&q=80&w=800"
+                             alt="Vine Terrace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs px-2.5 py-1 rounded-full moss-badge text-moss-200">Lush Vines</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-amber-100">Greenery Balcony</h3>
+                        <p class="text-xs text-stone-400 mt-1">Overhanging vines and potted botanical flora providing fresh oxygenated atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Snippet -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic">"The dark wooden tables and stone counter give Moh Maya such a serene earthy vibe in Katra. The cover calculation is super smooth!"</p>
+                    <div class="font-semibold text-amber-200 text-sm">— Ananya S., University student</div>
+                </div>
+                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic">"Best cold coffee in Prayagraj. Booking online saved us from waiting during peak evening hours!"</p>
+                    <div class="font-semibold text-amber-200 text-sm">— Rohit K., Regular patron</div>
+                </div>
+                <div class="stone-texture p-5 rounded-2xl border border-stone-800 text-xs space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic">"The stone baked garlic bread and walnut table corner made our anniversary evening memorable. Highly recommended."</p>
+                    <div class="font-semibold text-amber-200 text-sm">— Priya & Siddharth</div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MY BOOKINGS TRACKER -->
+        <section id="my-bookings" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+            <div class="wood-texture p-6 sm:p-10 rounded-3xl border border-wood-700/50">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Your History</span>
+                        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-stone-100">My Pre-Booked Eco Tables</h2>
+                    </div>
+                    <button onclick="clearUserBookings()" class="text-xs text-stone-400 hover:text-terracotta underline">Clear My Local History</button>
+                </div>
+
+                <div id="user-bookings-container" class="space-y-4">
+                    <!-- Dynamic user bookings rendered here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-950 border-t border-wood-800/80 pt-12 pb-8 z-10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full wood-texture flex items-center justify-center border border-amber-500/40">
+                    <i class="fa-solid font-serif text-xl text-amber-500">M</i>
+                </div>
+                <div>
+                    <div class="font-serif text-lg font-bold text-stone-200">Moh Maya Cafe</div>
+                    <div class="text-xs text-stone-400">Main Market Road, Near Science Faculty, Katra, Prayagraj</div>
+                </div>
+            </div>
+
+            <div class="text-xs text-stone-400 text-center md:text-right space-y-1">
+                <div>© 2026 Moh Maya Cafe Prayagraj. Handcrafted Eco-Luxe Experience.</div>
+                <div class="text-amber-500/80">Open Daily: 11:00 AM – 11:00 PM • Eco-Table Pre-booking Engine</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- MODALS & OVERLAYS -->
+
+    <!-- Payment Modal (UPI QR) -->
+    <div id="payment-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="wood-texture max-w-md w-full rounded-3xl p-6 sm:p-8 border border-moss-500/40 relative shadow-2xl my-8">
+            <div class="text-center space-y-2 mb-5">
+                <div class="w-14 h-14 rounded-full moss-badge text-moss-300 flex items-center justify-center mx-auto text-2xl border border-moss-400/40">
+                    <i class="fa-solid fa-qrcode"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-amber-200">Pay via UPI</h3>
+                <p class="text-xs text-stone-400">Kisi bhi UPI app (Paytm / PhonePe / Google Pay / BHIM) se QR scan karke payment karo</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-3 mx-auto max-w-[300px]">
+                <img src="assets/paytm-qr.png" alt="Moh Maya Cafe Paytm UPI QR — Mrityunjay Mishra" class="w-full h-auto rounded-lg">
+            </div>
+            <p class="text-center text-xs text-stone-300 mt-3">UPI ID: <span class="font-mono font-bold text-amber-300">9506605427@ptyes</span> (Mrityunjay Mishra)</p>
+
+            <div class="paper-texture p-4 rounded-2xl border border-wood-700 text-sm space-y-2 font-mono text-stone-300 mt-5">
+                <div class="flex justify-between"><span class="text-stone-400">Booking Code:</span><span id="pay-modal-code" class="font-bold text-amber-300">—</span></div>
+                <div class="flex justify-between"><span class="text-stone-400">Name:</span><span id="pay-modal-name" class="font-bold text-stone-100">—</span></div>
+                <div class="flex justify-between items-center border-t border-stone-700/60 pt-2"><span class="text-stone-300 font-bold">Amount to Pay:</span><span id="pay-modal-amount" class="text-2xl font-bold text-moss-400">₹0</span></div>
+            </div>
+
+            <div class="text-[11px] text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2 mt-4">
+                <i class="fa-solid fa-clock text-amber-500 mt-0.5"></i>
+                <p>Payment ke baad neeche wala button dabao. Tumhari booking <b class="text-amber-300">Payment Verification Pending</b> rahegi — cafe owner apne UPI me payment milna check karke verify (tick) karega, tabhi booking <b class="text-moss-300">Confirmed</b> hogi. Bina owner ke tick ke booking aage nahi badhegi.</p>
+            </div>
+
+            <button onclick="handlePaymentDone()" class="w-full mt-5 py-4 rounded-xl bg-gradient-to-r from-moss-700 via-moss-500 to-moss-700 text-white font-bold text-base shadow-xl hover:brightness-110 transition active:scale-95 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-check"></i> Payment Kar Diya — Verify Ke Liye Bhejo
+            </button>
+            <button onclick="cancelPayment()" class="w-full mt-2 py-2.5 rounded-xl stone-texture text-stone-300 text-xs font-semibold border border-stone-700 hover:border-terracotta">
+                Cancel — Payment Nahi Kiya
+            </button>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Receipt Modal -->
+    <div id="receipt-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="wood-texture max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-amber-500/40 relative shadow-2xl my-8">
+            <button onclick="closeReceiptModal()" class="absolute top-4 right-4 text-stone-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-14 h-14 rounded-full moss-badge text-moss-300 flex items-center justify-center mx-auto text-2xl border border-moss-400/40">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h3 id="receipt-title" class="font-serif text-2xl font-bold text-amber-200">Table Reservation Locked!</h3>
+                <p class="text-xs text-stone-400">Show this digital token upon arrival at Moh Maya Cafe</p>
+            </div>
+
+            <!-- Digital Receipt Box -->
+            <div id="receipt-card-content" class="paper-texture p-5 rounded-2xl border border-wood-700 text-xs space-y-3 font-mono text-stone-300">
+                <!-- Javascript fills this -->
+            </div>
+
+            <div class="mt-6 flex gap-3">
+                <button onclick="copyBookingCode()" class="flex-1 py-3 rounded-xl stone-texture text-amber-300 text-xs font-semibold hover:border-amber-500 border border-stone-700">
+                    <i class="fa-solid fa-copy mr-1"></i> Copy Code
+                </button>
+                <button id="receipt-print-btn" onclick="printBillForLatest()" class="flex-1 py-3 rounded-xl bg-moss-700 text-white text-xs font-bold hover:bg-moss-600 hidden">
+                    <i class="fa-solid fa-print mr-1"></i> Print Bill / Bill Print Karo
+                </button>
+                <button onclick="closeReceiptModal()" class="flex-1 py-3 rounded-xl bg-amber-500 text-stone-950 text-xs font-bold hover:bg-amber-400">
+                    Done & View Bookings
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Admin Dashboard Modal -->
+    <div id="admin-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="wood-texture max-w-5xl w-full max-h-[90vh] rounded-3xl p-6 sm:p-8 border border-wood-600 relative overflow-hidden flex flex-col">
+
+            <!-- Admin Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-wood-700">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                        <i class="fa-solid fa-user-shield text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-amber-100">Cafe Owner Admin Dashboard</h3>
+                        <p class="text-xs text-stone-400">Moh Maya Cafe Katra Prayagraj • Live System View</p>
+                    </div>
+                </div>
+                <button onclick="toggleAdminModal()" class="text-stone-400 hover:text-white text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Admin Stats Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 my-6">
+                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                    <div class="text-xs text-stone-400">Total Pre-Bookings</div>
+                    <div id="admin-stat-count" class="text-2xl font-bold text-amber-300 mt-1">0</div>
+                </div>
+                <div class="stone-texture p-4 rounded-2xl border border-amber-500/50">
+                    <div class="text-xs text-amber-300">Pending Verification</div>
+                    <div id="admin-stat-pending" class="text-2xl font-bold text-amber-400 mt-1">0</div>
+                </div>
+                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                    <div class="text-xs text-stone-400">Total Cover Online Paid</div>
+                    <div id="admin-stat-revenue" class="text-2xl font-bold text-moss-400 mt-1">₹0</div>
+                </div>
+                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                    <div class="text-xs text-stone-400">Girls Party Cover</div>
+                    <div id="admin-stat-girls" class="text-2xl font-bold text-stone-200 mt-1">0</div>
+                </div>
+                <div class="stone-texture p-4 rounded-2xl border border-stone-800">
+                    <div class="text-xs text-stone-400">Boys Party Cover</div>
+                    <div id="admin-stat-boys" class="text-2xl font-bold text-terracotta mt-1">0</div>
+                </div>
+            </div>
+
+            <div class="text-[11px] text-stone-400 bg-stone-950/60 p-3 rounded-xl border border-stone-800 flex items-start gap-2 mb-4">
+                <i class="fa-solid fa-shield-halved text-amber-500 mt-0.5"></i>
+                <p><b class="text-amber-300">Payment Verification Gate:</b> "Payment Verification Pending" wali booking pe pehle apne Paytm/UPI me paisa aana check karo. Paisa mil gaya ho to green <b class="text-moss-300">✔ Payment Received — Verify</b> button dabao — tabhi booking Confirmed hogi. Paisa nahi aaya ho to Reject karo.</p>
+            </div>
+
+            <!-- Admin Content Tabs -->
+            <div class="flex items-center space-x-4 border-b border-wood-700/60 pb-2 mb-4 text-xs font-semibold">
+                <button onclick="switchAdminTab('bookings')" id="tab-btn-bookings" class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40">Manage Customer Bookings</button>
+                <button onclick="switchAdminTab('menu')" id="tab-btn-menu" class="px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200">Menu Dish Manager</button>
+            </div>
+
+            <!-- Tab 1: Bookings Management Table -->
+            <div id="admin-tab-bookings" class="flex-1 overflow-y-auto space-y-4 pr-1">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-stone-300">
+                        <thead class="bg-stone-900/90 text-amber-200 uppercase tracking-wider text-[10px]">
+                            <tr>
+                                <th class="p-3">Code / Name</th>
+                                <th class="p-3">Slot & Corner</th>
+                                <th class="p-3">Party (G/B)</th>
+                                <th class="p-3">Pay Paid</th>
+                                <th class="p-3">Dishes</th>
+                                <th class="p-3">Status / Verify</th>
+                                <th class="p-3 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-bookings-tbody" class="divide-y divide-stone-800">
+                            <!-- JS fills admin rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 2: Menu Manager -->
+            <div id="admin-tab-menu" class="hidden flex-1 overflow-y-auto space-y-4 pr-1">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs text-stone-400">Toggle dish availability or add custom eco-bites</span>
+                    <button onclick="promptAddNewDish()" class="px-3 py-1.5 rounded-xl bg-moss-700 hover:bg-moss-600 text-stone-100 text-xs font-medium">
+                        + Add Custom Menu Item
+                    </button>
+                </div>
+                <div id="admin-menu-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- JS fills menu manager items -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PRINT-ONLY BILL AREA (filled by JS, visible only when printing) -->
+    <div id="bill-print-area"></div>
+
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // ================= CONFIG =================
+        const CAFE_UPI_ID = '9506605427@ptyes';
+        const STATUS_PENDING = 'Payment Verification Pending';
+        const STATUS_CONFIRMED = 'Confirmed';
+        const STATUS_REJECTED = 'Rejected';
+        const STORAGE_KEY = 'mohMaya_userBookings';
+
+        // Sample Organic Eco Menu Data
+        let menuData = [
+            { id: 'm1', name: 'Raw Walnut Cold Brew', category: 'coffee', price: 180, desc: 'Steeped for 18 hrs, infused with crushed walnut roast.', img: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm2', name: 'Stone-Hearth Garlic Focaccia', category: 'bites', price: 240, desc: 'Hand-kneaded dough baked on hot river slate tiles.', img: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm3', name: 'Hazelnut Dark Clay Shake', category: 'shakes', price: 220, desc: 'Organic cocoa and crushed hazelnuts served in terra clay.', img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm4', name: 'Katra Sunset Cappuccino', category: 'coffee', price: 160, desc: 'Double espresso shot with hand-whipped oat milk dusting.', img: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm5', name: 'Gen-Z Truffle Cheese Fries', category: 'genz', price: 210, desc: 'Hand-cut organic potatoes tossed in truffle oil & paprika.', img: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&q=80&w=600', available: true },
+            { id: 'm6', name: 'Smoked Wood Woodfired Pizza', category: 'bites', price: 340, desc: 'Fresh basil leaves, bocconcini cheese, oak-smoked crust.', img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600', available: true }
+        ];
+
+        // State variables
+        let preorderCart = {}; // { m1: quantity }
+        let currentGuestCounts = { girls: 1, boys: 1 };
+        let userBookings = [];
+        let latestBookingCode = '';
+        let pendingPaymentBooking = null; // booking waiting on the payment modal
+        let currentMenuCategory = 'all';
+
+        // ================= TIME HELPERS =================
+        function formatDateTime(ts) {
+            const d = new Date(ts);
+            return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) + ', ' +
+                   d.toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit', hour12: true });
+        }
+        function formatTimeOnly(ts) {
+            return new Date(ts).toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit', hour12: true });
+        }
+        // Estimated serving time = order time + 20 minutes (kitchen prep estimate)
+        function estimatedServingTime(b) {
+            return b.orderTimestamp + 20 * 60 * 1000;
+        }
+        function timeSinceText(ts) {
+            const mins = Math.max(0, Math.floor((Date.now() - ts) / 60000));
+            if (mins < 1) return 'just now';
+            if (mins < 60) return mins + ' min ago';
+            const h = Math.floor(mins / 60), m = mins % 60;
+            return h + ' hr ' + (m > 0 ? m + ' min ' : '') + 'ago';
+        }
+        function escapeHtml(s) {
+            return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+        function statusBadge(status) {
+            if (status === STATUS_PENDING) return '<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/50">&#9203; Payment Verification Pending</span>';
+            if (status === STATUS_CONFIRMED) return '<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-moss-900/80 text-moss-200 border border-moss-500/40">Confirmed</span>';
+            if (status === STATUS_REJECTED) return '<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-red-950/80 text-red-300 border border-red-700/60">Rejected — Payment Not Received</span>';
+            return '<span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-stone-800 text-stone-300 border border-stone-600">' + escapeHtml(status) + '</span>';
+        }
+
+        // ================= INIT =================
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('book-date');
+            dateInput.value = today;
+            dateInput.min = today;
+
+            initAmbientParticles();
+            loadBookingsFromStorage();
+            renderMenu('all');
+            calculateCover();
+
+            // Live sync: if bookings change in another tab (or admin verifies), re-render everywhere
+            window.addEventListener('storage', (e) => {
+                if (e.key === STORAGE_KEY) {
+                    loadBookingsFromStorage(false);
+                    renderUserBookings();
+                    if (!document.getElementById('admin-modal').classList.contains('hidden')) renderAdminDashboard();
+                }
+            });
+
+            // Keep "time since order" labels fresh while the page is open
+            setInterval(() => { renderUserBookings(); }, 60000);
+        });
+
+        function saveBookings() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(userBookings));
+        }
+
+        function initAmbientParticles() {
+            const container = document.getElementById('ambient-particles');
+            const icons = ['fa-leaf', 'fa-seedling', 'fa-fire'];
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('i');
+                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+                particle.className = `fa-solid ${randomIcon} leaf-particle`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${100 + Math.random() * 20}vh`;
+                particle.style.fontSize = `${10 + Math.random() * 14}px`;
+                particle.style.animationDuration = `${12 + Math.random() * 12}s`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                container.appendChild(particle);
+            }
+        }
+
+        // ================= GUESTS & COVER =================
+        function updateGuestCount(type, delta) {
+            if (type === 'girls') {
+                currentGuestCounts.girls = Math.max(0, currentGuestCounts.girls + delta);
+                document.getElementById('girls-count').innerText = currentGuestCounts.girls;
+            } else if (type === 'boys') {
+                currentGuestCounts.boys = Math.max(0, currentGuestCounts.boys + delta);
+                document.getElementById('boys-count').innerText = currentGuestCounts.boys;
+            }
+            calculateCover();
+        }
+
+        function getPreorderItems() {
+            const items = [];
+            for (let itemId in preorderCart) {
+                const qty = preorderCart[itemId];
+                if (qty > 0) {
+                    const item = menuData.find(m => m.id === itemId);
+                    if (item) items.push({ id: item.id, name: item.name, qty: qty, price: item.price });
+                }
+            }
+            return items;
+        }
+
+        function calculateCover() {
+            const girls = currentGuestCounts.girls;
+            const boys = currentGuestCounts.boys;
+
+            const girlsTotal = girls * 100;
+            const boysTotal = boys * 300;
+            const minAmount = girlsTotal + boysTotal;
+
+            const preOrderTotal = getPreorderItems().reduce((sum, i) => sum + i.price * i.qty, 0);
+            const payNow = Math.max(minAmount, preOrderTotal);
+            const balanceAtCafe = Math.max(0, preOrderTotal - minAmount);
+
+            document.getElementById('summary-girls-label').innerText = `Girls Cover (${girls} x ₹100):`;
+            document.getElementById('summary-girls-val').innerText = `₹${girlsTotal}`;
+            document.getElementById('summary-boys-label').innerText = `Boys Cover (${boys} x ₹300):`;
+            document.getElementById('summary-boys-val').innerText = `₹${boysTotal}`;
+            document.getElementById('summary-min-cover').innerText = `₹${minAmount}`;
+            document.getElementById('summary-preorder-total').innerText = `₹${preOrderTotal}`;
+            document.getElementById('summary-pay-now').innerText = `₹${payNow}`;
+            document.getElementById('summary-balance-at-cafe').innerText = `₹${balanceAtCafe}`;
+
+            renderSummaryCartList();
+        }
+
+        // ================= MENU =================
+        function updatePreorderCart(itemId, delta) {
+            if (!preorderCart[itemId]) preorderCart[itemId] = 0;
+            preorderCart[itemId] += delta;
+            if (preorderCart[itemId] <= 0) delete preorderCart[itemId];
+            renderMenu(currentMenuCategory || 'all');
+            calculateCover();
+        }
+
+        function filterMenu(category, btn) {
+            currentMenuCategory = category;
+            document.querySelectorAll('.menu-tab-btn').forEach(b => {
+                b.className = 'menu-tab-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap stone-texture text-stone-300 hover:text-white';
+            });
+            if (btn) {
+                btn.className = 'menu-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap wood-texture border border-amber-500/50 text-amber-200';
+            }
+            renderMenu(category);
+        }
+
+        function renderMenu(category) {
+            const grid = document.getElementById('menu-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all'
+                ? menuData
+                : menuData.filter(m => m.category === category);
+
+            filtered.forEach(item => {
+                const qty = preorderCart[item.id] || 0;
+                const card = document.createElement('div');
+                card.className = 'wood-texture rounded-2xl p-4 border border-wood-700/50 flex flex-col justify-between hover:border-amber-500/40 transition group';
+
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="h-40 rounded-xl overflow-hidden relative">
+                            <img src="${item.img}" alt="${escapeHtml(item.name)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/2c1e14/e0d2c3?text=${encodeURIComponent(item.name)}'">
+                            <span class="absolute top-2 right-2 text-xs font-bold px-2.5 py-1 rounded-full stone-texture text-amber-300 border border-stone-700">₹${item.price}</span>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-stone-100 text-base">${escapeHtml(item.name)}</h4>
+                            <p class="text-xs text-stone-400 mt-1">${escapeHtml(item.desc)}</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-wood-700/50 mt-4 flex items-center justify-between">
+                        <span class="text-[11px] ${item.available ? 'text-moss-400' : 'text-red-400'} font-medium">${item.available ? 'Fresh & Available' : 'Out of Stock'}</span>
+
+                        ${!item.available ? `
+                            <span class="text-[11px] text-stone-500">Unavailable</span>
+                        ` : qty === 0 ? `
+                            <button onclick="updatePreorderCart('${item.id}', 1)" class="px-3.5 py-1.5 rounded-lg bg-wood-800 hover:bg-amber-600 text-amber-200 hover:text-white text-xs font-semibold border border-wood-600 transition flex items-center gap-1">
+                                <i class="fa-solid fa-plus text-[10px]"></i> Pre-Order
+                            </button>
+                        ` : `
+                            <div class="flex items-center space-x-2 bg-stone-900 border border-amber-500/50 rounded-lg p-1">
+                                <button onclick="updatePreorderCart('${item.id}', -1)" class="w-6 h-6 rounded bg-wood-800 text-amber-200 font-bold text-xs hover:bg-wood-700 flex items-center justify-center">-</button>
+                                <span class="text-xs font-bold text-amber-300 w-5 text-center">${qty}</span>
+                                <button onclick="updatePreorderCart('${item.id}', 1)" class="w-6 h-6 rounded bg-wood-800 text-amber-200 font-bold text-xs hover:bg-wood-700 flex items-center justify-center">+</button>
+                            </div>
+                        `}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderSummaryCartList() {
+            const listContainer = document.getElementById('summary-menu-items-list');
+            listContainer.innerHTML = '';
+
+            const items = getPreorderItems();
+            if (items.length === 0) {
+                listContainer.innerHTML = `<p class="text-stone-500 italic py-2">No menu dishes added yet. Scroll to menu to pre-order snacks & brews!</p>`;
+                return;
+            }
+            items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'flex justify-between items-center bg-stone-900/60 p-2 rounded-lg border border-stone-800';
+                div.innerHTML = `
+                    <span>${escapeHtml(item.name)} <span class="text-amber-400 font-bold">x${item.qty}</span></span>
+                    <span class="font-semibold text-stone-200">₹${item.price * item.qty}</span>
+                `;
+                listContainer.appendChild(div);
+            });
+        }
+
+        // ================= BOOKING SUBMIT & PAYMENT GATE =================
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+
+            const date = document.getElementById('book-date').value;
+            const slot = document.getElementById('book-slot').value;
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const tableCorner = document.querySelector('input[name="table-corner"]:checked').value;
+            const payOption = document.querySelector('input[name="pay-option"]:checked').value;
+
+            if (currentGuestCounts.girls + currentGuestCounts.boys === 0) {
+                alert('Please add at least 1 guest (Girls or Boys) to book a table.');
+                return;
+            }
+
+            const girls = currentGuestCounts.girls;
+            const boys = currentGuestCounts.boys;
+            const minCover = (girls * 100) + (boys * 300);
+
+            const preorderItems = getPreorderItems();
+            const preorderTotal = preorderItems.reduce((sum, i) => sum + i.price * i.qty, 0);
+            const payNow = Math.max(minCover, preorderTotal);
+            const balanceAtCafe = Math.max(0, preorderTotal - minCover);
+
+            const randomHex = Math.floor(100000 + Math.random() * 900000);
+            const code = `MM-ECO-${randomHex}`;
+            latestBookingCode = code;
+
+            const now = Date.now();
+            const newBooking = {
+                code,
+                name,
+                phone,
+                date,
+                slot,
+                tableCorner,
+                girls,
+                boys,
+                minCover,
+                preorderItems,           // structured: [{id, name, qty, price}]
+                preorderTotal,
+                preorderDetails: preorderItems.length > 0 ? preorderItems.map(i => `${i.name} (x${i.qty})`).join(', ') : 'None',
+                payNow,
+                balanceAtCafe,
+                payOption,
+                // Online payment starts as PENDING — only the admin's tick can confirm it.
+                // Pay-at-counter is confirmed immediately (payment happens at the cafe).
+                status: payOption === 'online' ? STATUS_PENDING : STATUS_CONFIRMED,
+                paymentClaimed: false,
+                orderTimestamp: now,
+                orderTimeText: formatDateTime(now),
+                createdOn: new Date(now).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+            };
+
+            userBookings.unshift(newBooking);
+            saveBookings();
+            renderUserBookings();
+
+            // Reset cart for the next booking
+            preorderCart = {};
+            renderMenu(currentMenuCategory);
+            calculateCover();
+
+            if (payOption === 'online') {
+                // Show the QR payment screen — booking is NOT confirmed yet.
+                pendingPaymentBooking = newBooking;
+                document.getElementById('pay-modal-code').innerText = newBooking.code;
+                document.getElementById('pay-modal-name').innerText = newBooking.name;
+                document.getElementById('pay-modal-amount').innerText = '₹' + newBooking.payNow;
+                document.getElementById('payment-modal').classList.remove('hidden');
+            } else {
+                showReceiptModal(newBooking);
+            }
+        }
+
+        // Customer says "Payment kar diya" — booking stays PENDING until admin ticks it.
+        function handlePaymentDone() {
+            if (pendingPaymentBooking) {
+                const b = userBookings.find(x => x.code === pendingPaymentBooking.code);
+                if (b) {
+                    b.paymentClaimed = true;
+                    b.paymentClaimedAt = Date.now();
+                    saveBookings();
+                }
+                const toShow = b || pendingPaymentBooking;
+                pendingPaymentBooking = null;
+                document.getElementById('payment-modal').classList.add('hidden');
+                renderUserBookings();
+                showReceiptModal(toShow);
+            } else {
+                document.getElementById('payment-modal').classList.add('hidden');
+            }
+        }
+
+        // Customer cancels on the payment screen — remove the unverified booking entirely.
+        function cancelPayment() {
+            if (pendingPaymentBooking) {
+                userBookings = userBookings.filter(x => x.code !== pendingPaymentBooking.code);
+                saveBookings();
+                renderUserBookings();
+                pendingPaymentBooking = null;
+            }
+            document.getElementById('payment-modal').classList.add('hidden');
+        }
+
+        // ================= RECEIPT =================
+        function receiptHtml(b) {
+            const itemsLine = (b.preorderItems && b.preorderItems.length)
+                ? b.preorderItems.map(i => `${escapeHtml(i.name)} x${i.qty} — ₹${i.price * i.qty}`).join('<br>')
+                : 'None';
+            const servingLine = b.status === STATUS_CONFIRMED
+                ? `<div><span class="text-stone-400">Estimated Serving Time:</span> ${formatTimeOnly(estimatedServingTime(b))} (approx.)</div>`
+                : '';
+            const statusLine = b.status === STATUS_PENDING
+                ? `<div class="text-amber-300 font-bold">Status: &#9203; Payment Verification Pending — owner ke verify (tick) ke baad hi confirm hogi.</div>`
+                : b.status === STATUS_REJECTED
+                ? `<div class="text-red-300 font-bold">Status: Rejected — Payment Not Received. Please contact the cafe.</div>`
+                : `<div class="text-moss-300 font-bold">Status: Confirmed</div>`;
+            return `
+                <div class="flex justify-between border-b border-stone-700/60 pb-2 text-amber-300 font-bold">
+                    <span>BOOKING CODE:</span>
+                    <span>${b.code}</span>
+                </div>
+                <div class="space-y-1 py-1">
+                    <div><span class="text-stone-400">Guest Name:</span> <b class="text-stone-100">${escapeHtml(b.name)}</b> (${escapeHtml(b.phone)})</div>
+                    <div><span class="text-stone-400">Order Time:</span> ${b.orderTimeText || formatDateTime(b.orderTimestamp)}</div>
+                    <div><span class="text-stone-400">Date & Slot:</span> ${b.date} • ${escapeHtml(b.slot)}</div>
+                    <div><span class="text-stone-400">Table Corner:</span> ${escapeHtml(b.tableCorner)}</div>
+                    <div><span class="text-stone-400">Party Breakdown:</span> ${b.girls} Girls (x ₹100) / ${b.boys} Boys (x ₹300)</div>
+                    <div><span class="text-stone-400">Pre-ordered Dishes:</span><br>${itemsLine}</div>
+                    ${servingLine}
+                    ${statusLine}
+                </div>
+                <div class="border-t border-stone-700/60 pt-2 flex justify-between font-bold text-amber-200">
+                    <span>${b.payOption === 'online' ? 'AMOUNT PAYABLE VIA UPI:' : 'COVER TO PAY AT CAFE:'}</span>
+                    <span class="text-moss-400">₹${b.payNow}</span>
+                </div>
+                ${b.balanceAtCafe > 0 ? `<div class="text-terracotta text-[11px]">Remaining Food Balance at Cafe: ₹${b.balanceAtCafe}</div>` : ''}
+            `;
+        }
+
+        function showReceiptModal(b) {
+            latestBookingCode = b.code;
+            document.getElementById('receipt-card-content').innerHTML = receiptHtml(b);
+            document.getElementById('receipt-title').innerText =
+                b.status === STATUS_PENDING ? 'Payment Verification Pending' :
+                b.status === STATUS_REJECTED ? 'Booking Rejected' : 'Table Reservation Locked!';
+            const printBtn = document.getElementById('receipt-print-btn');
+            if (b.status === STATUS_CONFIRMED) printBtn.classList.remove('hidden');
+            else printBtn.classList.add('hidden');
+            document.getElementById('receipt-modal').classList.remove('hidden');
+        }
+
+        function findBooking(code) {
+            return userBookings.find(x => x.code === code);
+        }
+
+        function showReceiptByCode(code) {
+            const b = findBooking(code);
+            if (b) showReceiptModal(b);
+        }
+
+        function printBillForLatest() {
+            const b = findBooking(latestBookingCode);
+            if (b) printBill(b);
+        }
+
+        function closeReceiptModal() {
+            document.getElementById('receipt-modal').classList.add('hidden');
+            // Re-render so any admin verification done meanwhile is reflected
+            loadBookingsFromStorage(false);
+            renderUserBookings();
+            document.getElementById('my-bookings').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyBookingCode() {
+            if (!latestBookingCode) return;
+            const done = () => alert(`Booking Code ${latestBookingCode} copied to clipboard!`);
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(latestBookingCode).then(done).catch(() => fallbackCopy(done));
+            } else {
+                fallbackCopy(done);
+            }
+        }
+        function fallbackCopy(done) {
+            const tempInput = document.createElement('input');
+            tempInput.value = latestBookingCode;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(tempInput);
+            done();
+        }
+
+        // ================= MY BOOKINGS =================
+        function loadBookingsFromStorage(rerender = true) {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    userBookings = JSON.parse(saved);
+                } catch (e) {
+                    userBookings = [];
+                }
+            } else {
+                userBookings = [];
+            }
+            if (rerender) renderUserBookings();
+        }
+
+        function renderUserBookings() {
+            const container = document.getElementById('user-bookings-container');
+            if (!container) return;
+            document.getElementById('nav-bookings-count').innerText = userBookings.length;
+
+            if (userBookings.length === 0) {
+                container.innerHTML = `<div class="text-center py-8 text-stone-400 italic text-sm">No bookings recorded on this device yet. Pre-book a table above!</div>`;
+                return;
+            }
+
+            container.innerHTML = '';
+            userBookings.forEach((b) => {
+                const card = document.createElement('div');
+                card.className = 'stone-texture p-5 rounded-2xl border border-stone-700/60 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs';
+
+                const pendingInfo = b.status === STATUS_PENDING
+                    ? `<div class="text-amber-300 text-[11px] font-medium">Ordered ${timeSinceText(b.orderTimestamp)} — owner ke payment verify (tick) ka wait ho raha hai. Bina tick ke booking aage nahi badhegi.</div>`
+                    : '';
+                const confirmedInfo = b.status === STATUS_CONFIRMED
+                    ? `<div class="text-moss-300 text-[11px]">Estimated Serving Time: <b>${formatTimeOnly(estimatedServingTime(b))}</b> (order time + 20 min, approx.)</div>`
+                    : '';
+
+                card.innerHTML = `
+                    <div class="space-y-1.5">
+                        <div class="flex items-center gap-3 flex-wrap">
+                            <span class="font-mono font-bold text-amber-300 text-sm">${b.code}</span>
+                            ${statusBadge(b.status)}
+                        </div>
+                        <div class="text-stone-200"><span class="text-stone-400">Name:</span> <b>${escapeHtml(b.name)}</b> <span class="text-stone-500">(${escapeHtml(b.phone)})</span></div>
+                        <div class="text-stone-300"><span class="text-stone-400">Order Time:</span> ${b.orderTimeText || formatDateTime(b.orderTimestamp)}</div>
+                        <div class="text-stone-300"><span class="text-stone-400">Slot:</span> ${b.date} (${escapeHtml(b.slot)})</div>
+                        <div class="text-stone-300"><span class="text-stone-400">Corner:</span> ${escapeHtml(b.tableCorner)} • <span class="text-stone-400">Party:</span> ${b.girls}G / ${b.boys}B</div>
+                        <div class="text-stone-400 text-[11px]">Dishes: ${escapeHtml(b.preorderDetails)}</div>
+                        ${pendingInfo}
+                        ${confirmedInfo}
+                    </div>
+
+                    <div class="flex md:flex-col justify-between items-end gap-2 border-t md:border-t-0 pt-3 md:pt-0 border-stone-800">
+                        <div class="text-right">
+                            <div class="text-stone-400 text-[10px]">${b.payOption === 'online' ? 'Amount (UPI)' : 'Cover at Cafe'}</div>
+                            <div class="text-lg font-bold text-moss-400">₹${b.payNow}</div>
+                        </div>
+                        <button onclick="showReceiptByCode('${b.code}')" class="px-3 py-1.5 rounded-lg wood-texture text-amber-200 border border-amber-500/30 hover:border-amber-400">
+                            View Voucher
+                        </button>
+                        ${b.status === STATUS_CONFIRMED ? `
+                        <button onclick="printBillByCode('${b.code}')" class="px-3 py-1.5 rounded-lg bg-moss-700 text-white border border-moss-500/50 hover:bg-moss-600 font-semibold">
+                            <i class="fa-solid fa-print mr-1"></i> Print Bill
+                        </button>` : ''}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function clearUserBookings() {
+            if (confirm("Are you sure you want to clear your local booking history?")) {
+                userBookings = [];
+                localStorage.removeItem(STORAGE_KEY);
+                renderUserBookings();
+            }
+        }
+
+        // ================= PRINTABLE BILL =================
+        function printBillByCode(code) {
+            const b = findBooking(code);
+            if (b) printBill(b);
+        }
+
+        function printBill(b) {
+            if (b.status !== STATUS_CONFIRMED) {
+                alert('Bill is available only after the booking is Confirmed.');
+                return;
+            }
+            const girlsTotal = b.girls * 100;
+            const boysTotal = b.boys * 300;
+            const dishRows = (b.preorderItems && b.preorderItems.length)
+                ? b.preorderItems.map(i => `<tr><td>${escapeHtml(i.name)}</td><td style="text-align:center;">${i.qty}</td><td style="text-align:right;">₹${i.price}</td><td style="text-align:right;">₹${i.price * i.qty}</td></tr>`).join('')
+                : `<tr><td colspan="4" style="text-align:center;">No pre-ordered dishes</td></tr>`;
+
+            document.getElementById('bill-print-area').innerHTML = `
+                <div style="text-align:center; border-bottom:2px dashed #333; padding-bottom:10px;">
+                    <div style="font-size:24px; font-weight:bold; letter-spacing:1px;">MOH MAYA CAFE</div>
+                    <div style="font-size:12px;">Main Market Road, Near Science Faculty, Katra, Prayagraj</div>
+                    <div style="font-size:12px;">Open Daily: 11:00 AM – 11:00 PM</div>
+                    <div style="font-size:16px; font-weight:bold; margin-top:8px;">— BILL —</div>
+                </div>
+                <table style="margin-top:10px;">
+                    <tr><td>Customer Name:</td><td style="text-align:right;"><b style="font-size:15px;">${escapeHtml(b.name)}</b></td></tr>
+                    <tr><td>Phone:</td><td style="text-align:right;">${escapeHtml(b.phone)}</td></tr>
+                    <tr><td>Booking Code:</td><td style="text-align:right;">${b.code}</td></tr>
+                    <tr><td>Order Time:</td><td style="text-align:right;">${b.orderTimeText || formatDateTime(b.orderTimestamp)}</td></tr>
+                    <tr><td>Booking Date:</td><td style="text-align:right;">${b.date}</td></tr>
+                    <tr><td>Slot:</td><td style="text-align:right;">${escapeHtml(b.slot)}</td></tr>
+                    <tr><td>Table Corner:</td><td style="text-align:right;">${escapeHtml(b.tableCorner)}</td></tr>
+                    <tr><td>Estimated Serving Time:</td><td style="text-align:right;">${formatTimeOnly(estimatedServingTime(b))} (approx.)</td></tr>
+                </table>
+                <div style="border-top:2px dashed #333; margin-top:10px; padding-top:8px;">
+                    <b>COVER CHARGES (100% redeemable)</b>
+                    <table>
+                        <tr><td>Girls Cover — ${b.girls} x ₹100</td><td style="text-align:right;">₹${girlsTotal}</td></tr>
+                        <tr><td>Boys Cover — ${b.boys} x ₹300</td><td style="text-align:right;">₹${boysTotal}</td></tr>
+                        <tr><td><b>Minimum Cover</b></td><td style="text-align:right;"><b>₹${b.minCover}</b></td></tr>
+                    </table>
+                </div>
+                <div style="border-top:2px dashed #333; margin-top:10px; padding-top:8px;">
+                    <b>PRE-ORDERED DISHES</b>
+                    <table>
+                        <tr><th style="text-align:left;">Item</th><th>Qty</th><th style="text-align:right;">Price</th><th style="text-align:right;">Amount</th></tr>
+                        ${dishRows}
+                        <tr><td colspan="3"><b>Dishes Total</b></td><td style="text-align:right;"><b>₹${b.preorderTotal}</b></td></tr>
+                    </table>
+                </div>
+                <div style="border-top:2px dashed #333; margin-top:10px; padding-top:8px;">
+                    <table>
+                        <tr><td>${b.payOption === 'online' ? 'Amount Paid via UPI (verified by owner)' : 'Amount To Be Paid at Counter'}</td><td style="text-align:right;"><b>₹${b.payNow}</b></td></tr>
+                        <tr><td>Balance at Cafe</td><td style="text-align:right;">₹${b.balanceAtCafe}</td></tr>
+                    </table>
+                </div>
+                <div style="text-align:center; border-top:2px dashed #333; margin-top:12px; padding-top:10px; font-size:12px;">
+                    <div>Prices inclusive of all taxes.</div>
+                    <div style="margin-top:6px; font-size:14px;"><b>Thank you for visiting Moh Maya Cafe!</b></div>
+                    <div>— Katra, Prayagraj —</div>
+                </div>
+            `;
+            window.print();
+        }
+
+        // ================= ADMIN =================
+        function toggleAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                loadBookingsFromStorage(false);
+                renderAdminDashboard();
+            } else {
+                // Reflect any verification the admin just did on the customer side too
+                renderUserBookings();
+            }
+        }
+
+        function switchAdminTab(tab) {
+            document.getElementById('admin-tab-bookings').classList.add('hidden');
+            document.getElementById('admin-tab-menu').classList.add('hidden');
+
+            document.getElementById('tab-btn-bookings').className = 'px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200';
+            document.getElementById('tab-btn-menu').className = 'px-3 py-1.5 rounded-lg text-stone-400 hover:text-stone-200';
+
+            if (tab === 'bookings') {
+                document.getElementById('admin-tab-bookings').classList.remove('hidden');
+                document.getElementById('tab-btn-bookings').className = 'px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40';
+            } else {
+                document.getElementById('admin-tab-menu').classList.remove('hidden');
+                document.getElementById('tab-btn-menu').className = 'px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40';
+                renderAdminMenuManager();
+            }
+        }
+
+        function renderAdminDashboard() {
+            // Stats
+            document.getElementById('admin-stat-count').innerText = userBookings.length;
+            const pendingCount = userBookings.filter(b => b.status === STATUS_PENDING).length;
+            document.getElementById('admin-stat-pending').innerText = pendingCount;
+            // Revenue counts only owner-verified (Confirmed) online payments
+            const rev = userBookings.filter(b => b.status === STATUS_CONFIRMED && b.payOption === 'online')
+                                     .reduce((acc, curr) => acc + (curr.payNow || 0), 0);
+            document.getElementById('admin-stat-revenue').innerText = `₹${rev}`;
+
+            const totalGirls = userBookings.reduce((acc, curr) => acc + (curr.girls || 0), 0);
+            const totalBoys = userBookings.reduce((acc, curr) => acc + (curr.boys || 0), 0);
+            document.getElementById('admin-stat-girls').innerText = totalGirls;
+            document.getElementById('admin-stat-boys').innerText = totalBoys;
+
+            // Table Body
+            const tbody = document.getElementById('admin-bookings-tbody');
+            tbody.innerHTML = '';
+
+            if (userBookings.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="7" class="p-4 text-center text-stone-500 italic">No bookings yet.</td></tr>`;
+                return;
+            }
+
+            userBookings.forEach((b, idx) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-stone-900/50 transition' + (b.status === STATUS_PENDING ? ' bg-amber-500/5' : '');
+
+                let statusCell = '';
+                if (b.status === STATUS_PENDING) {
+                    statusCell = `
+                        <div class="space-y-2">
+                            <div>${statusBadge(b.status)}</div>
+                            <div class="text-[10px] text-stone-400">Customer claims paid ${b.paymentClaimed && b.paymentClaimedAt ? '(' + formatDateTime(b.paymentClaimedAt) + ')' : ''}. Apne Paytm/UPI (${CAFE_UPI_ID}) me ₹${b.payNow} aana check karo.</div>
+                            <button onclick="verifyPayment(${idx})" class="w-full px-3 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white text-xs font-bold shadow">
+                                &#10004; Payment Received — Verify
+                            </button>
+                            <button onclick="rejectPayment(${idx})" class="w-full px-3 py-1.5 rounded-lg bg-red-950 hover:bg-red-900 text-red-300 border border-red-700 text-[11px] font-semibold">
+                                Payment Not Received — Reject
+                            </button>
+                        </div>`;
+                } else if (b.status === STATUS_CONFIRMED) {
+                    statusCell = `
+                        <div class="space-y-1">
+                            <div>${statusBadge(b.status)}</div>
+                            <select onchange="updateBookingStatus(${idx}, this.value)" class="bg-stone-900 text-stone-200 border border-stone-700 rounded px-2 py-1 text-[11px]">
+                                <option value="Confirmed" ${b.status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
+                                <option value="Arrived" ${b.status === 'Arrived' ? 'selected' : ''}>Arrived</option>
+                                <option value="Completed" ${b.status === 'Completed' ? 'selected' : ''}>Completed</option>
+                                <option value="Cancelled" ${b.status === 'Cancelled' ? 'selected' : ''}>Cancelled</option>
+                            </select>
+                        </div>`;
+                } else {
+                    statusCell = `<div>${statusBadge(b.status)}</div>`;
+                }
+
+                tr.innerHTML = `
+                    <td class="p-3">
+                        <div class="font-mono font-bold text-amber-300">${b.code}</div>
+                        <div class="text-stone-300">${escapeHtml(b.name)} (${escapeHtml(b.phone)})</div>
+                        <div class="text-stone-500 text-[10px]">Order: ${b.orderTimeText || formatDateTime(b.orderTimestamp)}</div>
+                    </td>
+                    <td class="p-3">
+                        <div>${b.date}</div>
+                        <div class="text-stone-400 text-[10px]">${escapeHtml(b.slot)} • ${escapeHtml(b.tableCorner)}</div>
+                    </td>
+                    <td class="p-3">
+                        <span class="text-moss-400 font-bold">${b.girls}G</span> / <span class="text-terracotta font-bold">${b.boys}B</span>
+                    </td>
+                    <td class="p-3 font-bold text-moss-400">
+                        ₹${b.payNow}
+                        <div class="text-[10px] text-stone-500 font-normal">${b.payOption === 'online' ? 'UPI' : 'At Counter'}</div>
+                    </td>
+                    <td class="p-3 text-stone-400 max-w-xs">
+                        ${escapeHtml(b.preorderDetails)}
+                    </td>
+                    <td class="p-3 min-w-[210px]">
+                        ${statusCell}
+                    </td>
+                    <td class="p-3 text-right">
+                        <div class="flex flex-col items-end gap-1">
+                            ${b.status === STATUS_CONFIRMED ? `<button onclick="printBillByCode('${b.code}')" class="text-moss-300 hover:text-moss-200 p-1" title="Print Bill"><i class="fa-solid fa-print"></i></button>` : ''}
+                            <button onclick="deleteBooking(${idx})" class="text-terracotta hover:text-red-400 p-1" title="Delete booking">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // THE TICK: owner confirms the money actually arrived in their UPI.
+        // Only this action can move a pending online booking to Confirmed.
+        function verifyPayment(index) {
+            const b = userBookings[index];
+            if (!b || b.status !== STATUS_PENDING) return;
+            if (!confirm(`Confirm karun? Pehle check kar lo ki ${b.name} ka ₹${b.payNow} tumhare Paytm/UPI (${CAFE_UPI_ID}) me aa gaya hai.\n\nBooking: ${b.code}`)) return;
+            b.status = STATUS_CONFIRMED;
+            b.verifiedAt = Date.now();
+            saveBookings();
+            renderAdminDashboard();
+            renderUserBookings();
+        }
+
+        function rejectPayment(index) {
+            const b = userBookings[index];
+            if (!b || b.status !== STATUS_PENDING) return;
+            if (!confirm(`Reject karun? ${b.name} ki booking ${b.code} (₹${b.payNow}) — payment nahi mila, isliye reject ho jayegi.`)) return;
+            b.status = STATUS_REJECTED;
+            b.rejectedAt = Date.now();
+            saveBookings();
+            renderAdminDashboard();
+            renderUserBookings();
+        }
+
+        function updateBookingStatus(index, newStatus) {
+            userBookings[index].status = newStatus;
+            saveBookings();
+            renderUserBookings();
+            renderAdminDashboard();
+        }
+
+        function deleteBooking(index) {
+            if (confirm("Delete this booking from records?")) {
+                userBookings.splice(index, 1);
+                saveBookings();
+                renderAdminDashboard();
+                renderUserBookings();
+            }
+        }
+
+        function renderAdminMenuManager() {
+            const container = document.getElementById('admin-menu-list');
+            container.innerHTML = '';
+
+            menuData.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'stone-texture p-3 rounded-xl border border-stone-800 flex items-center justify-between text-xs';
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${item.img}" class="w-10 h-10 rounded-lg object-cover" alt="">
+                        <div>
+                            <div class="font-bold text-stone-200">${escapeHtml(item.name)}</div>
+                            <div class="text-amber-400">₹${item.price} • ${escapeHtml(item.category)}</div>
+                        </div>
+                    </div>
+                    <button onclick="toggleDishAvailability('${item.id}')" class="px-2.5 py-1 rounded text-[11px] font-semibold ${item.available ? 'bg-moss-900 text-moss-200 border border-moss-500' : 'bg-red-950 text-red-300 border border-red-700'}">
+                        ${item.available ? 'In Stock' : 'Out of Stock'}
+                    </button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function toggleDishAvailability(id) {
+            const item = menuData.find(m => m.id === id);
+            if (item) {
+                item.available = !item.available;
+                renderAdminMenuManager();
+                renderMenu(currentMenuCategory);
+            }
+        }
+
+        function promptAddNewDish() {
+            const name = prompt("Enter Dish Name:");
+            if (!name) return;
+            const price = parseInt(prompt("Enter Price (₹):") || "150");
+            const category = prompt("Category (coffee/bites/shakes/genz):", "bites") || "bites";
+
+            const newDish = {
+                id: 'm' + Date.now(),
+                name,
+                category,
+                price,
+                desc: 'Handcrafted eco special prepared fresh at Moh Maya.',
+                img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600',
+                available: true
+            };
+
+            menuData.push(newDish);
+            renderAdminMenuManager();
+            renderMenu(currentMenuCategory);
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
